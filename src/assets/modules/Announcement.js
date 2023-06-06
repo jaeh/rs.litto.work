@@ -1,6 +1,6 @@
 export const View = () =>
   div({ class: 'Announcement' }, [
-    Picture({ name: '/img/branding', height: 600, width: 1920 }),
+    Picture({ name: '/img/branding', height: 237, width: 800 }),
 
     p(['Augmented Reality Installation by ', Link({ to: 'https://litto.work/' }, 'litto')]),
     p('@Medienwerkstatt'),
