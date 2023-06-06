@@ -1,29 +1,7 @@
 export const state = {
   title: 'Reterritorialized Spaces',
-  description: 'Augmented Reality Installation @Medienwerkstatt, Neubaugasse 40A, 1070 Vienna. Opening: 16.06. 7pm',
-
-  announcement: {
-    list: [
-      'Augmented Reality Installation',
-      '@Medienwerkstatt',
-      'Neubaugasse 40a, 1070 Vienna',
-      '17.06. - 30.06. / 5pm - 8pm',
-      'Opening: 16.06. / 7pm',
-    ],
-
-    description: [
-      'Reterritorialized Spaces is a hybrid performance in public space ',
-      'entailing one performer projecting real space into virtual space ',
-      'by scanning with a LIDAR scanner through a mirror. ',
-      'The mirror breaks the geometric and perspective properties of space, ',
-      'resulting in experimental forms of spatial perception. ',
-      'In addition, the movement of the performer and the interaction ',
-      'with the audience influence the course of the performance. ',
-      'A virtual monument accessible with augmented reality on the ',
-      { to: 'https://artificialmuseum.com/', text: 'artificialmuseum.com'},
-      ' will remain.',
-    ],
-  },
+  description:
+    'Augmented Reality Installation @Medienwerkstatt, Neubaugasse 40A, 1070 Vienna. Opening: 16.06. 7pm',
 
   artifacts: {
     2021: [
@@ -43,7 +21,7 @@ export const state = {
         title: 'SANDKASTEN, Vienna',
         date: '2021-08-03',
         lat: 48.2181,
-        lng: 16.3330,
+        lng: 16.3333,
       },
     ],
 
@@ -64,13 +42,13 @@ export const state = {
         title: 'SCHMIEDE HALLEIN, Salzburg',
         date: '2022-07-25',
         lat: 47.6847,
-        lng: 13.0930,
+        lng: 13.0931,
       },
       {
         title: 'HELLERAU, Dresden',
         date: '2022-07-25',
         lat: 51.1135,
-        lng: 13.7530,
+        lng: 13.7531,
       },
     ],
   },

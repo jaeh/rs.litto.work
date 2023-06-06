@@ -4,7 +4,7 @@ export const View = state => {
   return [
     Picture({ name: '/img/hero', height: 1500, width: 2000 }),
 
-    Announcement(state.announcement),
+    Announcement(),
 
     // years.map(([year, artifacts]) => [
     //   Picture({ name: `/img/graphic_${year}`, height: 1180, width: 1920 }),
