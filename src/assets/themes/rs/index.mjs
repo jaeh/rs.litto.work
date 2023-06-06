@@ -29,7 +29,7 @@ export default (v = {}) => {
     body: {
       fontFamily: 'notosans',
       backgroundColor: v.background,
-      color: text.dark,
+      color: v.text.dark,
     },
 
     '.Wrapper': {
