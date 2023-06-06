@@ -4,4 +4,5 @@ export default {
   URL: 'rs.litto.work',
   PUBLIC: 'docs',
   THEME: 'rs',
+  CNAME: 'rs.litto.work',
 }
