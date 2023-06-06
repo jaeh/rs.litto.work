@@ -39,5 +39,6 @@ export const style = {
 
   '.description': {
     margin: '10em 0 0',
+    fontSize: '1.2em',
   },
 }
