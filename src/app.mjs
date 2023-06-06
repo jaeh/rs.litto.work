@@ -1,6 +1,6 @@
 export const state = {
-  title: '@magic',
-  description: 'hello, world',
+  title: 'Reterritorialized Spaces',
+  description: 'Augmented Reality Installation @Medienwerkstatt, Neubaugasse 40A, 1070 Vienna. Opening: 16.06. 7pm',
 
   announcement: {
     list: [
@@ -8,7 +8,7 @@ export const state = {
       '@Medienwerkstatt',
       'Neubaugasse 40a, 1070 Vienna',
       '17.06. - 30.06. / 5pm - 8pm',
-      'Opening: 16.06. / 19pm',
+      'Opening: 16.06. / 7pm',
     ],
 
     description: [
