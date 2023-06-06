@@ -6,7 +6,13 @@ export const View = state => div({ class: 'Announcement' }, [
 ])
 
 export const style = {
-  margin: '1em 2em',
+  margin: '3em 1em',
+
+  picture: {
+    img: {
+      maxWidth: '800px',
+    },
+  },
 
   p: {
     fontSize: '1.5em',
