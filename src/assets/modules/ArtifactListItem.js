@@ -1,5 +1,4 @@
 export const View = artifact => {
-
   return div({ class: 'ArtifactListItem' }, [
     Arrow(),
     h3(artifact.title),

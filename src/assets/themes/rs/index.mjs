@@ -1,7 +1,7 @@
 export const vars = {
   text: {
     dark: '#000000',
-    grey: '#4D4D4D'
+    grey: '#4D4D4D',
   },
 
   background: '#EDEDED',
@@ -44,6 +44,5 @@ export default (v = {}) => {
         height: 'auto',
       },
     },
-
   }
 }
