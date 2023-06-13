@@ -5,8 +5,8 @@ export const View = () =>
     p(['Augmented Reality Installation by ', Link({ to: 'https://litto.work/' }, 'litto')]),
     p('@Medienwerkstatt'),
     p('Neubaugasse 40a, 1070 Vienna'),
-    p('17.06. - 29.06. / 5pm - 8pm'),
-    p('Vernissage: 16.06. / 7pm'),
+    p('25.06. - 29.06. / 5pm - 8pm'),
+    p('Vernissage: 24.06. / 7pm'),
     p('Finissage: 30.06. / 7pm'),
 
     div({ class: 'description' }, [
