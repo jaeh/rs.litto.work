@@ -52,31 +52,31 @@ export const state = {
       },
     ],
 
-    2023: [
-      {
-        title: 'AA Collection, Vienna',
-        date: '2023-06-21, 19:00',
-        lat: 48.1884,
-        lng: 16.3306,
-      },
-      {
-        title: 'VZA 7, Vienna',
-        date: '2023-06-27, 11:30',
-        lat: 48.2084,
-        lng: 16.3843,
-      },
-      {
-        title: 'MuseumsQuartier Raum D, Vienna',
-        date: '2023-06-28, 19:00',
-        lat: 48.2042,
-        lng: 16.3582,
-      },
-      {
-        title: 'MEDIENWERKSTATT, Vienna',
-        date: '2023-06-30, 19:30',
-        lat: 48.2016,
-        lng: 16.3491,
-      },
-    ],
+    // 2023: [
+    //   {
+    //     title: 'AA Collection, Vienna',
+    //     date: '2023-06-21, 19:00',
+    //     lat: 48.1884,
+    //     lng: 16.3306,
+    //   },
+    //   {
+    //     title: 'VZA 7, Vienna',
+    //     date: '2023-06-27, 11:30',
+    //     lat: 48.2084,
+    //     lng: 16.3843,
+    //   },
+    //   {
+    //     title: 'MuseumsQuartier Raum D, Vienna',
+    //     date: '2023-06-28, 19:00',
+    //     lat: 48.2042,
+    //     lng: 16.3582,
+    //   },
+    //   {
+    //     title: 'MEDIENWERKSTATT, Vienna',
+    //     date: '2023-06-30, 19:30',
+    //     lat: 48.2016,
+    //     lng: 16.3491,
+    //   },
+    // ],
   },
 }
