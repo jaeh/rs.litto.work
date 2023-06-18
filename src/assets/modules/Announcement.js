@@ -2,8 +2,9 @@ export const View = () =>
   div({ class: 'Announcement' }, [
     Picture({ name: '/img/branding', height: 237, width: 800 }),
 
+    p(['Augmented Reality Installations by ', Link({ to: 'https://litto.work/' }, 'litto')]),
+
     p('Coming soon.'),
-    // p(['Augmented Reality Installation by ', Link({ to: 'https://litto.work/' }, 'litto')]),
     // p('@Medienwerkstatt'),
     // p('Neubaugasse 40a, 1070 Vienna'),
     // p('25.06. - 29.06. / 5pm - 8pm'),
