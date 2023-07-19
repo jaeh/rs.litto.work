@@ -1,0 +1,58 @@
+mixin locationArtifactList(artifacts)
+  for artifact in artifacts
+    div.artifact(data-slug=artifact.slug)
+      div.info
+        h2.nav.no-toggle(data-z="18" data-lat=artifact.lat data-lng=artifact.lng data-popup=artifact.slug)
+          if Array.isArray(artifact.name)
+            for n, i in artifact.name
+              span= i18n(n)
+
+              if i < artifact.name.length - 1
+                br
+          else
+            span= i18n(artifact.name)
+
+        for artist in artifact.artists
+          if artist.url
+            h3
+              a(href=artist.url target="_blank" rel="noreferrer noopener")= i18n(artist.name)
+          else
+            h3= i18n(artist.name)
+
+        if artifact.artists3d.length
+          h4= i18n('3D Visualization:')
+          for artist in artifact.artists3d
+            if artist.url
+              h5
+                a(href=artist.url target="_blank" rel="noreferrer noopener")= i18n(artist.name)
+            else
+              h5= i18n(artist.name)
+
+        if artifact.sound.length
+          h4= i18n('Sound:')
+          for artist in artifact.sound
+            if artist.url
+              h5
+                a(href=artist.url target="_blank" rel="noreferrer noopener")= i18n(artist.name)
+            else
+              h5= i18n(artist.name)
+
+        if artifact.performance.length
+          h4= i18n('Sound:')
+
+          for artist in artifact.performance
+            if artist.url
+              h5
+                a(href=artist.url target="_blank" rel="noreferrer noopener")= i18n(artist.name)
+            else
+              h5= i18n(artist.name)
+
+        div.button.styled.nav.close(data-z="18" data-lat=artifact.lat data-lng=artifact.lng)= i18n('Show on map')
+
+      +Picture({
+        file: `object/${artifact.preview || artifact.slug}`,
+        class: 'preview',
+        type: 'jpg',
+        height: 600,
+        width: 800,
+      })

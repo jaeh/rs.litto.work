@@ -1,0 +1,44 @@
+mixin City(city)
+  div.screen.list(data-name="list")
+    include /components/list-menu.pug
+
+    div.screen.sub.artists(data-name="list-artists")
+      ul
+        each artist in artists
+          -
+            const isInCity = artifacts
+              .filter(artifact => artifact.city === city)
+              .some(artifact => {
+                const isArtist = artifact.artists.some(ar => ar.name === artist.name)
+                const isArtist3D = artifact.artists3d.some(ar => ar.name === artist.name)
+                return isArtist || isArtist3D
+              })
+
+          if isInCity
+            include /components/artist.pug
+
+      include /components/backToTop.pug
+
+    div.screen.sub.artifacts(data-name="list")
+      ul
+        each artifact in artifacts
+          if artifact.city === city
+            include /components/artifact.pug
+
+      include /components/backToTop.pug
+
+    div.screen.sub.locations(data-name="list-locations")
+      ul
+        each location in locations
+          if location.city === city
+            include /components/location.pug
+
+      include /components/backToTop.pug
+
+    div.screen.sub.exhibitions(data-name="list-exhibitions")
+      ul
+        each exhibition in exhibitions
+          if exhibition.city === city
+            include /components/exhibition.pug
+
+      include /components/backToTop.pug

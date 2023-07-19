@@ -1,0 +1,20 @@
+div.warning#timeout-warning
+  div.container
+    div.cancel-button#timeout-warning-cancel x
+
+    include /logos/spinner.svg
+
+    div#timeout-warning-header= i18n('Loading artifacts for the first time might take a while.')
+
+    div#timeout-warning-info= i18n('The artifact is loading, your connection seems to be slow.')
+
+    div#timeout-warning-webgl-disabled
+      h2= i18n('Webgl not supported.')
+      p= i18n('Your device does not support webgl.')
+      button.styled.margin.inverse#timeout-warning-webgl-disabled-ok-button= i18n('Close')
+
+    div#timeout-warning-header-done
+      p= i18n('Finished loading.')
+      p= i18n(':)')
+
+    button.styled.margin.inverse#timeout-warning-confirm(disabled="true")= i18n('Enter Experience')
