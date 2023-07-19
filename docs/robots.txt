@@ -1,3 +1,0 @@
-user-agent: *
-allow: /
-sitemap: https:/rs.litto.work/sitemap.xml
