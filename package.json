@@ -6,6 +6,7 @@
     "start": "gss --dir src --cache no -p 8023",
     "build": "NODE_ENV=production node build/bin.js --sandbox --glb-url 'https://glb.artificialmuseum.com' --root-url 'https://staging.artificialmuseum.com' --static-url 'https://static.artificialmuseum.com' --media-url 'https://media.artificialmuseum.com' --sandbox-url 'https://rs.litto.work'",
     "dev": "node build/bin.js --cache 'no' --sandbox --watch --port 8023 --glb-url 'http://localhost:8001' --root-url 'http://localhost:8000' --static-url 'http://localhost:8002' --media-url 'http://localhost:8004' --sandbox-url 'http://localhost:8023'",
+    "prod": "NODE_ENV=production node build/bin.js --cache 'no' --sandbox --watch --glb-url 'https://glb.artificialmuseum.com' --root-url 'https://staging.artificialmuseum.com' --static-url 'https://static.artificialmuseum.com' --media-url 'https://media.artificialmuseum.com' --sandbox-url 'https://rs.litto.work'",
     "format": "f -w --exclude docs"
   },
   "type": "module",
