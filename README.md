@@ -1,3 +1,3 @@
-## rs.litto.work
+# rs.litto.work
 
-Exhibition page for the Medienwerkstatt exhibition 2023
+augmented reality artifacts
