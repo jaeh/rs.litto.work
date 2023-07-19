@@ -1,55 +1,43 @@
 {
-  "name": "@magic-examples/minimal",
-  "version": "0.23.5",
-  "private": true,
-  "author": "Wizards & Witches",
-  "description": "@magic example page.",
-  "license": "AGPL-3.0",
-  "homepage": "https://magic.github.io/example-minimal",
-  "type": "module",
-  "engines": {
-    "node": ">=14.15.4"
-  },
+  "name": "@artificialmuseum/sandbox-generator",
+  "version": "0.0.1",
+  "description": "artificialmuseum.com sandbox generator - generates a sandbox that allows creation of artifacts for the Artificial Museum.",
   "scripts": {
-    "start": "t -p",
-    "format": "f -w --exclude docs",
-    "test": "t --exclude docs",
-    "build": "NODE_ENV=production magic build",
-    "devbuild": "magic build",
-    "prod": "NODE_ENV=production magic build serve",
-    "dev": "magic dev",
-    "publish": "magic publish",
-    "connect": "magic connect"
+    "start": "gss --dir src --cache no -p 8023",
+    "build": "NODE_ENV=production node build/bin.js --sandbox --glb-url 'https://glb.artificialmuseum.com' --root-url 'https://staging.artificialmuseum.com' --static-url 'https://static.artificialmuseum.com' --media-url 'https://media.artificialmuseum.com' --sandbox-url 'https://rs.litto.work'",
+    "dev": "node build/bin.js --cache 'no' --sandbox --watch --port 8023 --glb-url 'http://localhost:8001' --root-url 'http://localhost:8000' --static-url 'http://localhost:8002' --media-url 'http://localhost:8004' --sandbox-url 'http://localhost:8023'",
+    "format": "f -w --exclude docs"
   },
-  "main": "src/index.js",
-  "files": [
-    "src"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magic-examples/minimal.git"
-  },
-  "bugs": {
-    "url": "https://github.com/magic-examples/minimal/issues"
-  },
-  "dependencies": {
-    "@magic-modules/no-spy": "0.0.9",
-    "@magic-modules/picture": "0.0.2",
-    "@magic/core": "0.0.153"
-  },
+  "type": "module",
+  "author": "SystemKollektiv",
+  "license": "AGPL-3.0",
   "devDependencies": {
+    "@babel/preset-env": "7.20.2",
+    "@babel/preset-modules": "0.1.5",
+    "@grundstein/gss": "0.0.14",
+    "@grundstein/prepare-static-files": "0.0.11",
+    "@magic/cli": "0.0.44",
+    "@magic/css": "0.7.54",
     "@magic/format": "0.0.51",
-    "@magic/test": "0.2.17"
+    "@magic/fs": "0.0.28",
+    "@magic/log": "0.1.18",
+    "@magic/test": "0.2.17",
+    "@rollup/plugin-babel": "6.0.3",
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "@rollup/plugin-replace": "5.0.2",
+    "pug": "3.0.2",
+    "rollup": "3.19.1",
+    "rollup-plugin-analyzer": "4.0.0",
+    "rollup-plugin-glslify": "1.3.1"
   },
-  "keywords": [
-    "magic",
-    "example",
-    "minimal"
-  ],
   "contributors": [
     {
       "name": "jascha ehrenreich",
       "github": "jaeh"
+    },
+    {
+      "name": "daniela weiss",
+      "github": "mslitto"
     }
   ]
 }
