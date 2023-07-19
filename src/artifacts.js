@@ -5,7 +5,7 @@ export const artifacts = [
     lat: 48.2181,
     lng: 16.3333,
     config: {
-      slug: 'mw_sandkasten',
+      slug: 'rs_sandkasten',
       file: 'rs/sandkasten',
       sky: 'vienna/semmelweisklinik-fog',
 
@@ -49,7 +49,7 @@ export const artifacts = [
     lat: 50.8155,
     lng: 12.9132,
     config: {
-      slug: 'mw_ibug',
+      slug: 'rs_ibug',
       // file: 'rs/ibug',
       glb: false,
       sky: 'vienna/semmelweisklinik-fog',
@@ -88,7 +88,7 @@ export const artifacts = [
     lat: 47.5651,
     lng: 7.6011,
     config: {
-      slug: 'mw_messehalle',
+      slug: 'rs_messehalle',
       sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
       file: 'rs/messehalle',
@@ -124,7 +124,7 @@ export const artifacts = [
     lat: 47.5779,
     lng: 7.5858,
     config: {
-      slug: 'mw_landestelle1',
+      slug: 'rs_landestelle1',
       file: 'rs/landestelle1',
       sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
@@ -163,7 +163,7 @@ export const artifacts = [
     lat: 47.5779,
     lng: 7.5858,
     config: {
-      slug: 'mw_landestelle2',
+      slug: 'rs_landestelle2',
       file: 'rs/landestelle2',
       sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
@@ -210,7 +210,7 @@ export const artifacts = [
     lat: 46.6281,
     lng: 10.7655,
     config: {
-      slug: 'mw_schlanders_basis',
+      slug: 'rs_schlanders_basis',
       sky: 'vienna/semmelweisklinik-fog',
 
       file: 'rs/schlanders_basis',
@@ -271,7 +271,7 @@ export const artifacts = [
     lat: 46.6277,
     lng: 10.7673,
     config: {
-      slug: 'mw_schlanders_caserma',
+      slug: 'rs_schlanders_caserma',
       sky: 'vienna/semmelweisklinik-fog',
       file: 'rs/schlanders_caserma',
 
@@ -329,7 +329,7 @@ export const artifacts = [
     lat: 48.2362,
     lng: 16.3205,
     config: {
-      slug: 'mw_semmelweis',
+      slug: 'rs_semmelweis',
       clip: true,
       sky: 'vienna/semmelweisklinik-fog',
 
@@ -366,7 +366,7 @@ export const artifacts = [
     lat: 47.6847,
     lng: 13.0931,
     config: {
-      slug: 'mw_schmiede_pc',
+      slug: 'rs_schmiede_pc',
       sky: 'vienna/semmelweisklinik-fog',
       clip: true,
       distance: -1,
@@ -402,7 +402,7 @@ export const artifacts = [
     lat: 47.6847,
     lng: 13.0931,
     config: {
-      slug: 'mw_schmiede_moving',
+      slug: 'rs_schmiede_moving',
       frustumCulled: false,
       sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
