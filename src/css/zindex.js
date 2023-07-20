@@ -47,4 +47,8 @@ export default {
   '#hud, #hud .w, #hud-exit-button': {
     zIndex: 11000,
   },
+
+  '.exitScreenButton': {
+    zIndex: 12000,
+  }
 }
