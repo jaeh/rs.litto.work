@@ -172,9 +172,40 @@ export default vars => ({
     whiteSpace: 'nowrap',
   },
 
+  'button.styled, .button.styled': {
+    background: vars.buttonBackgroundColor,
+    borderRadius: '2em',
+    boxShadow: `5px 0 10px ${vars.buttonShadowColorDark}, -5px 0 10px ${vars.buttonShadowColorLight}`,
+    display: 'block',
+    fontSize: '1em',
+    margin: '0 auto',
+    padding: '0.8em',
+
+    '&.margin': {
+      margin: '1em auto 0',
+    },
+  },
+
   'button:disabled': {
     background: '#555',
     color: '#0c0c0c',
     cursor: 'not-allowed',
+  },
+
+  '.rotate': {
+    animation: 'rotation 5s',
+    animationIterationCount: 'infinite',
+    animationTimingFunction: 'linear',
+    transformOrigin: '50% 50%',
+  },
+
+  '@keyframes rotation': {
+    from: {
+      transform: 'rotate(0deg)',
+    },
+
+    to: {
+      transform: 'rotate(359deg)',
+    },
   },
 })
