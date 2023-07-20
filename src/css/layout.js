@@ -185,6 +185,15 @@ export default vars => ({
       margin: '1em auto 0',
     },
   },
+  'button.inline, .button.inline': {
+    display: 'inline-block',
+  },
+
+  'button.inverse, .button.inverse': {
+    background: vars.buttonTextColor,
+    boxShadow: 'none',
+    color: vars.buttonBackgroundColor,
+  },
 
   'button:disabled': {
     background: '#555',
