@@ -1,5 +1,0 @@
-export { deepClean } from './deepClean.js'
-export { getCustomScenes } from './getCustomScenes.js'
-export { glslMinify } from './glslMinify.js'
-export { replaceSlashSlash } from './replaceSlashSlash.js'
-export { slugify } from './slugify.js'
