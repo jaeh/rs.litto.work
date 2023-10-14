@@ -50,5 +50,5 @@ export default {
 
   '.exitScreenButton': {
     zIndex: 12000,
-  }
+  },
 }

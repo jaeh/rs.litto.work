@@ -17,17 +17,7 @@ export const vars = variables
 
 export const theme = (vars = variables) => {
   let styles = {}
-  const libs = [
-    reset,
-    fonts,
-    layout,
-    warnings,
-    popups,
-    themeStyle,
-    three,
-    mediaqueries,
-    zindex,
-  ]
+  const libs = [reset, fonts, layout, warnings, popups, themeStyle, three, mediaqueries, zindex]
 
   libs.forEach(lib => {
     styles = deep.merge(styles, is.fn(lib) ? lib(vars) : lib)
