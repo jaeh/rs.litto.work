@@ -1,0 +1,25 @@
+@use './variables.scss';
+
+.popup {
+  background-color: var(--popup-container-background-color);
+  color: var(--popup-container-text-color);
+  display: none;
+  left: 15px;
+  position: fixed;
+  text-align: center;
+  width: calc(100vw - 30px);
+  top: 36px;
+
+  .container {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 15px;
+  }
+
+  .cancel-button {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}

@@ -1,0 +1,30 @@
+.screen {
+  z-index: 999;
+}
+
+header.main,
+footer.main {
+  z-index: 1000;
+}
+
+.warning {
+  z-index: 2001;
+}
+
+#onboardings {
+  z-index: 3000;
+}
+
+.popup {
+  z-index: 4000;
+}
+
+#three-canvas {
+  z-index: 10000;
+}
+
+#hud,
+#hud .w,
+#hud-exit-button {
+  z-index: 11000;
+}

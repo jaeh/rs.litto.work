@@ -1,0 +1,56 @@
+:root {
+  --text-color: #0c0c0c;
+  --background-color: #fafafa;
+
+  --fonts: notosans, ubuntu, 'Segoe UI', roboto, 'Lucida Grande', 'Helvetica Neue', helvetica, arial,
+    sans-serif;
+
+  --highlight-color: #07fff5;
+  --three-canvas-background-color: #000;
+  --link-color: #000;
+  --top-offset: 30px;
+  --top-offset-times-two: 70px;
+
+  /* this gets applied to the map popup buttons */
+  --button-background-color: var(--text-color);
+  --button-text-color: var(--background-color);
+  --button-shadow-color-dark: #e0e0e0;
+  --button-shadow-color-light: #fff;
+  --button-inverse-shadow-color-dark: #000;
+  --button-inverse-colorLight: #0c0c0c;
+
+  /* warnings pop up in unsupported browsers */
+  --warning-container-background-color: var(--background-color);
+  --timeout-warning-container-background-color: rgba(0, 0, 0, 0.8);
+  --timeout-warning-container-text-color: var(--background-color);
+
+  /* gets applied to the map messagebox popups */
+  --messagebox-background-color: text-color;
+  --messagebox-text-color: background-color;
+  --messagebox-error-text-color: #f8f822;
+  --menu-item-color: #333;
+  --menu-item-color-active: #0c0c0c;
+  --menu-item-color-greyed: #666;
+
+  /* this is the border color between screen list items */
+  --screen-list-item-border-color: #e0e0e0;
+  --split-medium-screen-container-width: 500px;
+  --split-medium-screen-map-offset: 520px;
+  --split-medium-screen-onboarding-offset: 515px;
+  --split-big-screen-container-width: 600px;
+  --split-big-screen-map-offset: 620px;
+  --split-big-screen-popup-offset: 615px;
+  --splitHuge-screen-containerWidth: 700px;
+  --splitHuge-screen-map-offset: 720px;
+  --splitHuge-screen-popup-offset: 720px;
+  --transition-duration: 300ms;
+  --hud-text-color: var(--background-color);
+  --popup-container-background-color: rgba(0, 0, 0, 0.8);
+  --popup-container-text-color: var(--background-color);
+  --screen-max-width: 1600px;
+
+  --text-dark: #000000;
+  --text-grey: #4d4d4d;
+
+  --background: #ededed;
+}

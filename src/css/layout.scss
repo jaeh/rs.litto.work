@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--text-color), var(--background-color);
+  scrollbar-width: thin;
+}
+
+.visible {
+  display: inherit !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 20px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--fonts);
+  font-size: 15px;
+  line-height: 1.2;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  padding: 0 15px;
+  position: absolute;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+/* h5 {
+    fontWeight: 700;
+  } */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1em 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--link-color);
+
+  &.no-style {
+    text-decoration: none;
+  }
+}
+
+canvas {
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+.nav {
+  cursor: pointer;
+}
+
+footer.main {
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 15px;
+
+  &.up {
+    display: none;
+  }
+}
+
+button,
+.button {
+  border: 0 none;
+  cursor: pointer;
+  font-family: var(--fonts);
+  letter-spacing: 1px;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+
+  &.styled {
+    background: var(--button-background-color);
+    border-radius: 2em;
+    box-shadow: 5px 0 10px var(--button-shadow-color-dark) -5px 0 10px var(--button-shadow-color-light);
+    display: block;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0.8em;
+
+    &.margin {
+      margin: 1em auto 0;
+    }
+  }
+
+  &.inline {
+    display: inline-block;
+  }
+
+  &.inverse {
+    background: var(--button-text-color);
+    box-shadow: none;
+    color: var(--button-background-color);
+  }
+
+  &:disabled {
+    background: #555;
+    color: #0c0c0c;
+    cursor: not-allowed;
+  }
+}
+
+.rotate {
+  animation: rotation 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

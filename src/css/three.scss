@@ -1,0 +1,54 @@
+body.three-running {
+  overflow: hidden;
+}
+
+#three-container {
+  display: none;
+}
+
+#three-canvas {
+  background-color: var(--three-canvas-background-color);
+  outline: none;
+}
+
+#three-video {
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+#toggle-animation-button {
+  width: 66px;
+  height: 48px;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  display: none;
+
+  .visible {
+    display: block;
+  }
+
+  svg: {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .pause {
+    display: none;
+  }
+
+  &.play {
+    .play {
+      display: none;
+    }
+
+    .pause {
+      display: block;
+    }
+  }
+}
