@@ -31,16 +31,17 @@
   <div id="three-container"></div>
 </div>
 
-<style lang="sass">
-*
-  margin: 3em 1em
+<style lang="scss">
+  * {
+    margin: 3em 1em;
 
-  p
-    font-size: 1.5em
-    font-style: italic
-
-  .description
-    margin: 5em 0 0
-    font-size: 1.2em
-
+    p {
+      font-size: 1.5em;
+      font-style: italic;
+    }
+    .description {
+      margin: 5em 0 0;
+      font-size: 1.2em;
+    }
+  }
 </style>

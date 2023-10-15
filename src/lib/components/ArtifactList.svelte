@@ -21,15 +21,18 @@
   </div>
 {/each}
 
-<style lang="sass">
-  .Year
-    h2
-      font-style: italic
-      font-size: 3em
-      padding: .2em 0
-      margin: 0
+<style lang="scss">
+  .Year {
+    h2 {
+      font-style: italic;
+      font-size: 3em;
+      padding: 0.2em 0;
+      margin: 0;
+    }
 
-    .Lines
-      margin: 3em 0 0
-      max-width: 40%
+    .Lines {
+      margin: 3em 0 0;
+      max-width: 40%;
+    }
+  }
 </style>

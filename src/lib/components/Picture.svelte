@@ -38,16 +38,20 @@
   <img class={imgClass} src="{src}{type}" {alt} {role} {height} {width} />
 </picture>
 
-<style lang="sass">
-  img
-    max-width: 100%
-    max-height: 100%
-    height: auto
+<style lang="scss">
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 
-    &.margin
-      margin: 0 0 2em
-    &.block
-      display: block
-    &.max-width
-      max-width: 800px
+    &.margin {
+      margin: 0 0 2em;
+    }
+    &.block {
+      display: block;
+    }
+    &.max-width {
+      max-width: 800px;
+    }
+  }
 </style>

@@ -38,58 +38,66 @@
   </div> -->
 </div>
 
-<style lang="sass">
-#hud
-  color: #fafafa
-  display: none
-  position: relative
-  top: 0
-  left: 0
-  text-align: center
+<style lang="scss">
+  #hud {
+    color: #fafafa;
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
 
-  // #hud-menu
-  //   display: none
+    // #hud-menu
+    //   display: none
 
-  // #hud-menu-sub
-  //   display: none
+    // #hud-menu-sub
+    //   display: none
 
-  // #hud-menu-record-video
-  //   display: none
+    // #hud-menu-record-video
+    //   display: none
 
-  .w
-    background-color: rgba(0,0,0,0.4)
-    height: auto
-    left: 50vw
-    max-width: 90vw
-    opacity: 0
-    padding: 20px 70px
-    position: fixed
-    top: 50vh
-    transform: translate(-50%,-50%)
-    transition: opacity 500ms,visibility 500ms
-    visibility: hidden
+    .w {
+      background-color: rgba(0, 0, 0, 0.4);
+      height: auto;
+      left: 50vw;
+      max-width: 90vw;
+      opacity: 0;
+      padding: 20px 70px;
+      position: fixed;
+      top: 50vh;
+      transform: translate(-50%, -50%);
+      transition:
+        opacity 500ms,
+        visibility 500ms;
+      visibility: hidden;
 
-    &.visible
-      opacity: 1
-      transition: opacity 500ms,visibility 500ms
-      visibility: visible
+      &.visible {
+        opacity: 1;
+        transition:
+          opacity 500ms,
+          visibility 500ms;
+        visibility: visible;
+      }
+    }
 
-  #hud-exit-button
-    border: 0 none
-    background: transparent
-    cursor: pointer
-    left: auto
-    margin: 0
-    padding: 0
-    position: fixed
-    right: 10px
-    top: 10px
-    -webkit-user-select: none
-    -moz-user-select: none
-    user-select: none
-    width: 40px
+    #hud-exit-button {
+      border: 0 none;
+      background: transparent;
+      cursor: pointer;
+      left: auto;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      width: 40px;
 
-    &:focus
-      background: transparent
-
+      &:focus {
+        background: transparent;
+      }
+    }
+  }
 </style>
