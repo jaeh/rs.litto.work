@@ -1,5 +1,5 @@
 const main = async () => {
-  const { sandbox } = await import('__ROOT_URL__/rs.js')
+  const { sandbox } = await import('process.env.ROOT_URL/rs.js')
 
   const onLoadObjectButtonClick = await sandbox()
 

@@ -1,0 +1,35 @@
+<script lang="ts">
+  import type { Years } from '../artifacts'
+
+  import { ArtifactListItem, Picture } from '$lib'
+
+  export let years: Years
+</script>
+
+{#each Object.entries(years) as [year, items]}
+  <div class="Year">
+    <img class="Lines" src="/img/lines.png" alt="" height="4" width="300" />
+    <h2>{year}</h2>
+
+    <Picture imgClass="margin block" src="/img/graphic_{year}" height="1180" width="1920" />
+
+    <div>
+      {#each items as artifact}
+        <ArtifactListItem {artifact} />
+      {/each}
+    </div>
+  </div>
+{/each}
+
+<style lang="sass">
+  .Year
+    h2
+      font-style: italic
+      font-size: 3em
+      padding: .2em 0
+      margin: 0
+
+    .Lines
+      margin: 3em 0 0
+      max-width: 40%
+</style>

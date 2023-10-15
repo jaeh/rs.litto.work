@@ -1,9 +1,103 @@
-export const artifacts = [
+export type Image = {
+  file: string
+  time: number
+}
+
+export type Mirror = {
+  type: number
+  params: [number, number]
+
+  position?: {
+    x?: number
+    y?: number
+    z?: number
+  }
+
+  rotation?: {
+    x?: number
+    y?: number
+    z?: number
+  }
+}
+
+export type Config = {
+  slug: string
+  file?: string
+  glb?: boolean
+  sky?: string
+  audio?: string
+
+  ply?: {
+    file?: string
+    size?: number
+    sizeAttenuation?: boolean
+  }
+
+  distance?: number
+
+  mirrors?: Mirror[]
+
+  animations?: {
+    autoplay?: boolean
+  }
+
+  clip?: boolean
+  video?: boolean
+
+  record3d?: {
+    parentName?: string
+    useBone?: boolean
+
+    filterSize?: string
+    /* minimum distance of pixels in video that should be visible. */
+    minDepth?: string
+    /* maximum depth of pixels in video that should be visible. */
+    maxDepth?: string
+    /* in meters. Smaller values = more aggressive filtering */
+    depthThresholdFilter?: string
+    /* scale of the artefact overall */
+    scale?: string
+    /* the ptSize of single "pixels" of the artifact */
+    ptSize?: string
+    /* defines the depth offset, multiplies depth texture hue */
+    depthHueMultiplier?: string
+    /* positive values move all pixels towards the camera */
+    zOffset?: string
+
+    pixelDepth?: string
+    depthScale?: string
+    sizeAttenuation?: string
+
+    permanentSeconds?: number[]
+
+    images?: Image[]
+  }
+
+  videoBoundAnimation?: boolean
+  frustumCulled?: boolean
+}
+
+export type Artifact = {
+  title: string
+  date: string
+  lat: number
+  lng: number
+  config?: Config
+}
+
+export type Years = {
+  2021: Artifact[]
+  2022: Artifact[]
+  2023: Artifact[]
+}
+
+export const artifacts: Artifact[] = [
   {
     title: 'DREIMÄDERLHAUS, Vienna',
     date: '2021-08-03',
     lat: 48.2181,
     lng: 16.3333,
+
     config: {
       slug: 'rs_sandkasten',
       file: 'rs/sandkasten',
@@ -48,6 +142,7 @@ export const artifacts = [
     date: '2021-22-03',
     lat: 50.8155,
     lng: 12.9132,
+
     config: {
       slug: 'rs_ibug',
       // file: 'rs/ibug',
@@ -87,6 +182,7 @@ export const artifacts = [
     date: '2021-08-27',
     lat: 47.5651,
     lng: 7.6011,
+
     config: {
       slug: 'rs_messehalle',
       sky: 'vienna/semmelweisklinik-fog',
@@ -123,6 +219,7 @@ export const artifacts = [
     date: '2021-08-27',
     lat: 47.5779,
     lng: 7.5858,
+
     config: {
       slug: 'rs_landestelle1',
       file: 'rs/landestelle1',
@@ -162,6 +259,7 @@ export const artifacts = [
     date: '2021-08-27',
     lat: 47.5779,
     lng: 7.5858,
+
     config: {
       slug: 'rs_landestelle2',
       file: 'rs/landestelle2',
@@ -209,6 +307,7 @@ export const artifacts = [
     date: '2022-07-25',
     lat: 46.6281,
     lng: 10.7655,
+
     config: {
       slug: 'rs_schlanders_basis',
       sky: 'vienna/semmelweisklinik-fog',
@@ -246,6 +345,7 @@ export const artifacts = [
 
         permanentSeconds: [2, 7, 9, 12, 18, 22, 26, 32],
       },
+
       videoBoundAnimation: true,
       frustumCulled: false,
       video: true,
@@ -270,6 +370,7 @@ export const artifacts = [
     date: '2022-07-25',
     lat: 46.6277,
     lng: 10.7673,
+
     config: {
       slug: 'rs_schlanders_caserma',
       sky: 'vienna/semmelweisklinik-fog',
@@ -328,6 +429,7 @@ export const artifacts = [
     date: '2022-09-06',
     lat: 48.2362,
     lng: 16.3205,
+
     config: {
       slug: 'rs_semmelweis',
       clip: true,
@@ -365,6 +467,7 @@ export const artifacts = [
     date: '2022-09-17',
     lat: 47.6847,
     lng: 13.0931,
+
     config: {
       slug: 'rs_schmiede_pc',
       sky: 'vienna/semmelweisklinik-fog',
@@ -401,6 +504,7 @@ export const artifacts = [
     date: '2022-09-17',
     lat: 47.6847,
     lng: 13.0931,
+
     config: {
       slug: 'rs_schmiede_moving',
       frustumCulled: false,
@@ -436,7 +540,6 @@ export const artifacts = [
 
         //hueRedReducer: '1.1',
 
-        parentName: 'parent',
         permanentSeconds: [2, 4, 8, 9.5, 18.5],
       },
 
@@ -465,14 +568,13 @@ export const artifacts = [
     date: '2023-07-15',
     lat: 47.91325,
     lng: 16.15975,
+
     config: {
       slug: 'rinside',
       frustumCulled: false,
       sky: 'lindabrunn/theothervillage',
       distance: -1,
       file: 'rinside',
-
-      frustumCulled: false,
 
       video: true,
 
@@ -572,3 +674,9 @@ export const artifacts = [
   //   lng: 16.3491,
   // },
 ]
+
+export const years: Years = {
+  2021: artifacts.filter(a => a.date.startsWith('2021')),
+  2022: artifacts.filter(a => a.date.startsWith('2022')),
+  2023: artifacts.filter(a => a.date.startsWith('2023')),
+}
