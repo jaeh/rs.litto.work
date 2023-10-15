@@ -6,6 +6,7 @@ export { default as ArtifactListItem } from './components/ArtifactListItem.svelt
 export { default as DeviceWarning } from './components/DeviceWarning.svelte'
 export { default as Hero } from './components/Hero.svelte'
 export { default as HUD } from './components/Hud.svelte'
+export { default as LoadArtifactButton } from './components/LoadArtifactButton.svelte'
 export { default as Noscript } from './components/Noscript.svelte'
 export { default as Picture } from './components/Picture.svelte'
 export { default as Spinner } from './components/Spinner.svelte'
