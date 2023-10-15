@@ -19,7 +19,7 @@
 </div>
 
 <style lang="scss">
-  * {
+  .ArtifactListItem {
     clear: both;
     margin: 0 0 2em;
 
@@ -47,6 +47,13 @@
     }
     .latlng {
       color: var(--text-grey);
+    }
+
+    .Arrow {
+      float: left;
+      height: 3.8em;
+      width: auto;
+      margin: 0 0.5em 0 0;
     }
   }
 </style>

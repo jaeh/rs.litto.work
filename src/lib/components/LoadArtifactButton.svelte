@@ -19,7 +19,7 @@
 </button>
 
 <style lang="scss">
-  * {
+  .show-artifact {
     width: 0;
     max-width: 0;
     float: left;
