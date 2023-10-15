@@ -56,7 +56,7 @@
     // #hud-menu-record-video
     //   display: none
 
-    .w {
+    :global(.w) {
       background-color: rgba(0, 0, 0, 0.4);
       height: auto;
       left: 50vw;
@@ -71,7 +71,7 @@
         visibility 500ms;
       visibility: hidden;
 
-      &.visible {
+      &:global(.visible) {
         opacity: 1;
         transition:
           opacity 500ms,
