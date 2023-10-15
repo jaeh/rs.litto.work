@@ -1,24 +1,14 @@
 <script lang="ts">
   import type { Artifact } from '../artifacts'
 
+  import { LoadArtifactButton } from '$lib'
+
   export let artifact: Artifact
-
-  const loadArtifact = async evt => {
-    const { sandbox } = await import('__ROOT_URL__/rs.js')
-
-    const onLoadObjectButtonClick = await sandbox()
-
-    onLoadObjectButtonClick({ artifact, button: evt.target })()
-  }
 </script>
 
 <div class="ArtifactListItem">
   {#if artifact.config}
-    <button class="show-artifact" on:click|preventDefault={loadArtifact}>
-      Enter 3D
-      <br />
-      Experience
-    </button>
+    <LoadArtifactButton {artifact} />
   {/if}
 
   <img class="Arrow" src="/img/arrow.png" height="60" width="30" alt="" />
@@ -35,7 +25,7 @@
 
     &:hover,
     &:focus {
-      button.show-artifact {
+      :global(button.show-artifact) {
         width: auto;
         max-width: 500px;
         // transition: max-width 0.5s, margin 0.5s;
@@ -58,22 +48,5 @@
     .latlng {
       color: var(--text-grey);
     }
-  }
-
-  button.show-artifact {
-    width: 0;
-    max-width: 0;
-    float: left;
-    background: transparent;
-    color: #000000;
-    overflow: hidden;
-    text-align: left;
-    font-weight: bold;
-    font-size: 1.3em;
-    padding: 0;
-    transition:
-      max-width 0.5s,
-      margin 0.5s;
-    line-height: 1em;
   }
 </style>
