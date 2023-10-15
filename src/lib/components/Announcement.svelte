@@ -32,7 +32,7 @@
 </div>
 
 <style lang="scss">
-  * {
+  .Announcement {
     margin: 3em 1em;
 
     p {
@@ -44,4 +44,5 @@
       font-size: 1.2em;
     }
   }
+
 </style>
