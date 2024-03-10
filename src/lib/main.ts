@@ -1,5 +1,7 @@
+import { ENGINE_URL } from './URLS'
+
 const main = async () => {
-  const { sandbox } = await import('process.env.ROOT_URL/rs.js')
+  const { sandbox } = await import(`${ENGINE_URL}/rs.js`)
 
   const onLoadObjectButtonClick = await sandbox()
 
