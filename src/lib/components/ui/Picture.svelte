@@ -10,7 +10,7 @@
   export let loading: PictureProps['loading'] = !lazy ? 'eager' : 'lazy'
   export let pictureClass: PictureProps['pictureClass'] = null
   export let role: PictureProps['role'] = alt ? null : 'presentation'
-  export let title: PictureProps['title'] = alt
+  export let title: PictureProps['title'] = alt ? alt : null
   export let type: PictureProps['type'] = 'jpg'
   export let webp: PictureProps['webp'] = true
 
