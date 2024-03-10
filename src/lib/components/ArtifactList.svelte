@@ -11,7 +11,7 @@
     <img class="Lines" src="/img/lines.png" alt="" height="4" width="300" />
     <h2>{year}</h2>
 
-    <Picture imgClass="margin block" src="/img/graphic_{year}" height="1180" width="1920" />
+    <Picture imgClass="margin block" file="/img/graphic_{year}" height="1180" width="1920" />
 
     <div>
       {#each items as artifact}

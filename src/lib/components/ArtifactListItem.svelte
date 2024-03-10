@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { Artifact } from '../artifacts'
 
-  import { LoadArtifactButton } from '$lib'
+  import { ArtifactLoadButton } from '$lib'
 
   export let artifact: Artifact
 </script>
 
 <div class="ArtifactListItem">
   {#if artifact.config}
-    <LoadArtifactButton {artifact} />
+    <ArtifactLoadButton {artifact} />
   {/if}
 
   <img class="Arrow" src="/img/arrow.png" height="60" width="30" alt="" />

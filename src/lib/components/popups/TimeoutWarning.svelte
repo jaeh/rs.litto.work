@@ -1,10 +1,12 @@
 <script lang="ts">
-  import { Spinner } from '$lib'
+  import { Spinner } from '$lib/icons'
+
+  export let squeeze: boolean = false
 </script>
 
-<div class="warning" id="timeout-warning">
+<div id="timeout-warning" class="warning" class:squeeze>
   <div class="container">
-    <div class="cancel-button" id="timeout-warning-cancel">x</div>
+    <div id="timeout-warning-cancel" class="cancel-button">x</div>
 
     <Spinner />
 
@@ -15,16 +17,18 @@
     <div id="timeout-warning-webgl-disabled">
       <h2>Webgl not supported.</h2>
       <p>Your device does not support webgl.</p>
-      <button class="styled margin inverse" id="timeout-warning-webgl-disabled-ok-button"></button>
+      <button id="timeout-warning-webgl-disabled-ok-button" class="button styled margin inverse">
+        Close
+      </button>
     </div>
 
     <div id="timeout-warning-header-done">
-      <p>Finished loading</p>
+      <p>Finished loading.</p>
       <p>:)</p>
     </div>
 
-    <button class="styled margin inverse" id="timeout-warning-confirm" disabled="true"
-      >Enter Experience</button
-    >
+    <button id="timeout-warning-confirm" class="button styled margin inverse" disabled={true}>
+      Enter Experience
+    </button>
   </div>
 </div>

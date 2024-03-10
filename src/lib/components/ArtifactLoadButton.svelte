@@ -1,14 +1,18 @@
 <script lang="ts">
+  import { ENGINE_URL } from '$lib/URLS'
+
   import type { Artifact } from '../artifacts'
 
   export let artifact: Artifact
 
   const loadArtifact = async evt => {
-    const { sandbox } = await import('__ROOT_URL__/rs.js')
+    const { sandbox } = await import(`${ENGINE_URL}/rs.js`)
 
     const onLoadObjectButtonClick = await sandbox()
 
-    onLoadObjectButtonClick({ artifact, button: evt.target })()
+    // console.log({ artifact, button: evt.target })
+
+    onLoadObjectButtonClick({ artifact: artifact.config, button: evt.target })()
   }
 </script>
 

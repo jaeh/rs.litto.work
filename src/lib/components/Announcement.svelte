@@ -3,7 +3,7 @@
 </script>
 
 <div class="Announcement">
-  <Picture imgClass="margin max-width" src="/img/branding" height="237" width="800" />
+  <Picture imgClass="margin max-width" file="/img/branding" height="237" width="800" />
 
   <p>
     Augmented Reality Installations by
