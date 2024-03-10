@@ -33,6 +33,18 @@ export type Config = {
     sizeAttenuation?: boolean
   }
 
+  cam?: {
+    x?: number
+    y?: number
+    z?: number
+  }
+
+  lookAt?: {
+    x?: number
+    y?: number
+    z?: number
+  }
+
   distance?: number
 
   mirrors?: Mirror[]
@@ -91,6 +103,45 @@ export type Years = {
   2023: Artifact[]
 }
 
+const floorMirror: Mirror =
+  {
+    type: 1,
+    params: [2.2, 1.3],
+    position: {
+      // x: 1,
+      z: 0,
+      y: 2.0,
+      x: -8,
+    },
+    rotation: {
+      x: 0,
+      y: 90,
+    },
+}
+
+const wallMirror: Mirror = {
+  type: 2,
+  params: [0.5, 32],
+  position: {
+    // x: 1,
+    z: 0,
+    y: 0.01,
+  },
+  rotation: {
+    x: 270,
+  },
+}
+
+const camSettings = {
+  cam: {
+    y: 1.7,
+  },
+
+  lookAt: {
+    y: 1.7
+  },
+}
+
 export const artifacts: Artifact[] = [
   {
     title: 'DREIMÄDERLHAUS, Vienna',
@@ -101,27 +152,11 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rs_sandkasten',
       file: 'rs/sandkasten',
-      sky: 'vienna/semmelweisklinik-fog',
-
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
       // record3d: true,
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
-
+      mirrors: [floorMirror],
       animations: {
         autoplay: false,
       },
@@ -131,6 +166,8 @@ export const artifacts: Artifact[] = [
         size: 0.01,
         sizeAttenuation: true,
       },
+
+      ...camSettings,
 
       clip: true,
       video: true,
@@ -147,7 +184,8 @@ export const artifacts: Artifact[] = [
       slug: 'rs_ibug',
       // file: 'rs/ibug',
       glb: false,
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
 
       ply: {
         file: 'rs/ibug.ply',
@@ -155,25 +193,12 @@ export const artifacts: Artifact[] = [
         sizeAttenuation: true,
       },
 
+      ...camSettings,
+
       distance: -1,
       // record3d: true,
 
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
+      mirrors: [floorMirror],
     },
   },
 
@@ -185,28 +210,17 @@ export const artifacts: Artifact[] = [
 
     config: {
       slug: 'rs_messehalle',
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
       file: 'rs/messehalle',
       // audio: 'rmessehalle',
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
+      mirrors: [floorMirror],
       video: true,
       clip: true,
+
+      ...camSettings,
+
       ply: {
         file: 'rs/messehalle.ply',
         size: 0.01,
@@ -223,32 +237,21 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rs_landestelle1',
       file: 'rs/landestelle1',
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
       clip: true,
       audio: 'rlandestelle1',
+
+      ...camSettings,
+
       ply: {
         file: 'rs/landestelle1',
         size: 0.01,
         sizeAttenuation: true,
       },
 
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
+      mirrors: [floorMirror],
 
       // record3d: true,
       video: true,
@@ -263,9 +266,13 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rs_landestelle2',
       file: 'rs/landestelle2',
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
       clip: true,
+
+      ...camSettings,
+
       ply: {
         file: 'rs/landestelle2',
         size: 0.01,
@@ -274,22 +281,7 @@ export const artifacts: Artifact[] = [
       audio: 'rlandestelle1',
       video: true,
       // record3d: true,
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
+      mirrors: [floorMirror],
     },
   },
 
@@ -310,11 +302,14 @@ export const artifacts: Artifact[] = [
 
     config: {
       slug: 'rs_schlanders_basis',
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
 
       file: 'rs/schlanders_basis',
 
       // hideModelsOnVideoEnded: ['face', 'mirror'],
+
+      ...camSettings,
 
       distance: -1,
       record3d: {
@@ -349,20 +344,7 @@ export const artifacts: Artifact[] = [
       videoBoundAnimation: true,
       frustumCulled: false,
       video: true,
-      mirrors: [
-        {
-          type: 2,
-          params: [0.5, 32],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 0.01,
-          },
-          rotation: {
-            x: 270,
-          },
-        },
-      ],
+      mirrors: [wallMirror],
     },
   },
   {
@@ -373,10 +355,13 @@ export const artifacts: Artifact[] = [
 
     config: {
       slug: 'rs_schlanders_caserma',
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       file: 'rs/schlanders_caserma',
 
       distance: -1,
+
+      ...camSettings,
 
       frustumCulled: false,
       video: true,
@@ -408,20 +393,7 @@ export const artifacts: Artifact[] = [
 
         permanentSeconds: [2, 7, 12, 20, 24, 26],
       },
-      mirrors: [
-        {
-          type: 2,
-          params: [0.5, 32],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 0.01,
-          },
-          rotation: {
-            x: 270,
-          },
-        },
-      ],
+      mirrors: [wallMirror],
     },
   },
   {
@@ -433,7 +405,8 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rs_semmelweis',
       clip: true,
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
 
       distance: -1,
       ply: {
@@ -444,22 +417,9 @@ export const artifacts: Artifact[] = [
       glb: false,
       audio: 'rsemmelweisklinik',
 
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
+      ...camSettings,
+
+      mirrors: [floorMirror],
     },
   },
   {
@@ -470,7 +430,8 @@ export const artifacts: Artifact[] = [
 
     config: {
       slug: 'rs_schmiede_pc',
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       clip: true,
       distance: -1,
       audio: 'rschmiede2022',
@@ -481,22 +442,9 @@ export const artifacts: Artifact[] = [
       },
       glb: false,
 
-      mirrors: [
-        {
-          type: 1,
-          params: [2.2, 1.3],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 2.0,
-            x: -8,
-          },
-          rotation: {
-            x: 0,
-            y: 90,
-          },
-        },
-      ],
+      ...camSettings,
+
+      mirrors: [floorMirror],
     },
   },
   {
@@ -508,10 +456,13 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rs_schmiede_moving',
       frustumCulled: false,
-      sky: 'vienna/semmelweisklinik-fog',
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
       distance: -1,
       file: 'rs/schmiede_moving',
       video: true,
+
+      ...camSettings,
 
       record3d: {
         parentName: 'parent',
@@ -543,20 +494,7 @@ export const artifacts: Artifact[] = [
         permanentSeconds: [2, 4, 8, 9.5, 18.5],
       },
 
-      mirrors: [
-        {
-          type: 2,
-          params: [0.5, 32],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 0.01,
-          },
-          rotation: {
-            x: 270,
-          },
-        },
-      ],
+      mirrors: [wallMirror],
     },
   },
 
@@ -572,9 +510,12 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rinside',
       frustumCulled: false,
-      sky: 'lindabrunn/theothervillage',
+      sky: 'vienna/white',
+      // sky: 'lindabrunn/theothervillage',
       distance: -1,
       file: 'rinside',
+
+      ...camSettings,
 
       video: true,
 
@@ -633,20 +574,7 @@ export const artifacts: Artifact[] = [
         ],
       },
 
-      mirrors: [
-        {
-          type: 2,
-          params: [0.5, 32],
-          position: {
-            // x: 1,
-            z: 0,
-            y: 0.01,
-          },
-          rotation: {
-            x: 270,
-          },
-        },
-      ],
+      mirrors: [wallMirror],
     },
   },
   // {
@@ -676,7 +604,7 @@ export const artifacts: Artifact[] = [
 ]
 
 export const years: Years = {
-  2021: artifacts.filter(a => a.date.startsWith('2021')),
-  2022: artifacts.filter(a => a.date.startsWith('2022')),
   2023: artifacts.filter(a => a.date.startsWith('2023')),
+  2022: artifacts.filter(a => a.date.startsWith('2022')),
+  2021: artifacts.filter(a => a.date.startsWith('2021')),
 }
