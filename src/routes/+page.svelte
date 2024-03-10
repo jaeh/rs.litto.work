@@ -1,5 +1,15 @@
 <script type="ts">
-  import { years, ArtifactList, DeviceWarning, Hero, HUD, Picture, Link, Noscript, TimeoutWarning } from '$lib'
+  import {
+    years,
+    ArtifactList,
+    DeviceWarning,
+    Hero,
+    HUD,
+    Picture,
+    Link,
+    Noscript,
+    TimeoutWarning,
+  } from '$lib'
 </script>
 
 <Hero />

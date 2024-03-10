@@ -103,20 +103,19 @@ export type Years = {
   2023: Artifact[]
 }
 
-const floorMirror: Mirror =
-  {
-    type: 1,
-    params: [2.2, 1.3],
-    position: {
-      // x: 1,
-      z: 0,
-      y: 2.0,
-      x: -8,
-    },
-    rotation: {
-      x: 0,
-      y: 90,
-    },
+const floorMirror: Mirror = {
+  type: 1,
+  params: [2.2, 1.3],
+  position: {
+    // x: 1,
+    z: 0,
+    y: 2.0,
+    x: -8,
+  },
+  rotation: {
+    x: 0,
+    y: 90,
+  },
 }
 
 const wallMirror: Mirror = {
@@ -138,7 +137,7 @@ const camSettings = {
   },
 
   lookAt: {
-    y: 1.7
+    y: 1.7,
   },
 }
 
