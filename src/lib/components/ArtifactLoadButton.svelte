@@ -5,12 +5,10 @@
 
   export let artifact: Artifact
 
-  const loadArtifact = async evt => {
+  const loadArtifact = async (evt: MouseEvent) => {
     const { sandbox } = await import(`${ENGINE_URL}/rs.js`)
 
     const onLoadObjectButtonClick = await sandbox()
-
-    // console.log({ artifact, button: evt.target })
 
     onLoadObjectButtonClick({ artifact: artifact.config, button: evt.target })()
   }
