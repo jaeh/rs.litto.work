@@ -1,4 +1,5 @@
 import { ENGINE_URL } from './URLS'
+import { artifacts } from './artifacts'
 
 const main = async () => {
   const { sandbox } = await import(`${ENGINE_URL}/rs.js`)
@@ -7,10 +8,17 @@ const main = async () => {
 
   const artifactButtons = document.getElementsByClassName('show-artifact')
 
-  Array.from(artifactButtons).forEach(button => {
+  Array.from(artifactButtons).forEach((button: Element) => {
     button.addEventListener('click', evt => {
-      const artifact = window.APP_DB.artifacts.find(a => a.title === evt.target.dataset.title)
+      const target: HTMLButtonElement = evt.target as HTMLButtonElement
+
+      const artifact = artifacts.find(a => a.title === target.dataset.title)
       // console.log('load in main.js', artifact)
+
+      if (!artifact) {
+        console.error('undefined artifact detected')
+        return
+      }
 
       onLoadObjectButtonClick({ artifact: artifact.config, button })()
     })
