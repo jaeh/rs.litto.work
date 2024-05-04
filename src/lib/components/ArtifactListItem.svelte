@@ -2,6 +2,7 @@
   import type { Artifact } from '../artifacts'
 
   import { ArtifactLoadButton } from '$lib'
+  import { base } from '$app/paths'
 
   export let artifact: Artifact
 </script>
@@ -11,7 +12,7 @@
     <ArtifactLoadButton {artifact} />
   {/if}
 
-  <img class="Arrow" src="/img/arrow.png" height="60" width="30" alt="" />
+  <img class="Arrow" src="{base}/img/arrow.png" height="60" width="30" alt="" />
 
   <h3>{artifact.title}</h3>
   <div class="date">{artifact.date}</div>

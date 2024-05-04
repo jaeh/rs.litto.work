@@ -2,13 +2,14 @@
   import type { Years } from '../artifacts'
 
   import { ArtifactListItem, Picture } from '$lib'
+    import { base } from '$app/paths';
 
   export let years: Years
 </script>
 
 {#each Object.entries(years) as [year, items]}
   <div class="Year">
-    <img class="Lines" src="/img/lines.png" alt="" height="4" width="300" />
+    <img class="Lines" src="{base}/img/lines.png" alt="" height="4" width="300" />
     <h2>{year}</h2>
 
     <Picture imgClass="margin block" file="/img/graphic_{year}" height="1180" width="1920" />
