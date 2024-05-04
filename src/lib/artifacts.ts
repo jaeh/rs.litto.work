@@ -363,7 +363,8 @@ export const artifacts: Artifact[] = [
       ...camSettings,
 
       frustumCulled: false,
-      video: 'https://media.artificialmuseum.com/video/rs_schlanders_caserma/rs_schlanders_caserma.webm',
+      // video: 'https://media.artificialmuseum.com/video/rs_schlanders_caserma/rs_schlanders_caserma.webm',
+      video: true,
       record3d: {
         parentName: 'parent',
         useBone: true,
@@ -390,7 +391,7 @@ export const artifacts: Artifact[] = [
 
         //hueRedReducer: '1.1',
 
-        permanentSeconds: [2, 7, 12, 20, 24, 26],
+        // permanentSeconds: [2, 7, 12, 20, 24, 26],
       },
       mirrors: [wallMirror],
     },
