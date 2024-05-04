@@ -54,7 +54,7 @@ export type Config = {
   }
 
   clip?: boolean
-  video?: boolean
+  video?: boolean | string
 
   record3d?: {
     parentName?: string
@@ -363,7 +363,7 @@ export const artifacts: Artifact[] = [
       ...camSettings,
 
       frustumCulled: false,
-      video: true,
+      video: 'https://media.artificialmuseum.com/video/rs_schlanders_caserma/rs_schlanders_caserma.webm',
       record3d: {
         parentName: 'parent',
         useBone: true,
