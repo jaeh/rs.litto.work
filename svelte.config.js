@@ -16,6 +16,10 @@ export const config = {
       // this will match a file
       $db: 'src/db/index',
     },
+
+    paths: {
+      base: '',
+    }
   },
 }
 
