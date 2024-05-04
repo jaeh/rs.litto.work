@@ -378,7 +378,7 @@ export const artifacts: Artifact[] = [
       videoBoundAnimation: true,
       frustumCulled: false,
       video: true,
-      mirrors: [wallMirror],
+      // mirrors: [wallMirror],
     },
   },
   {
@@ -455,7 +455,7 @@ export const artifacts: Artifact[] = [
         ],
       },
 
-      mirrors: [wallMirror],
+      // mirrors: [wallMirror],
     },
   },
   {
@@ -579,7 +579,7 @@ export const artifacts: Artifact[] = [
         ],
       },
 
-      mirrors: [wallMirror],
+      // mirrors: [wallMirror],
     },
   },
 
