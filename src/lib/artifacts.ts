@@ -54,7 +54,7 @@ export type Config = {
   }
 
   clip?: boolean
-  video?: boolean
+  video?: boolean | string
 
   record3d?: {
     parentName?: string
@@ -80,7 +80,7 @@ export type Config = {
     depthScale?: string
     sizeAttenuation?: string
 
-    permanentSeconds?: number[]
+    // permanentSeconds?: number[]
 
     images?: Image[]
   }
@@ -315,7 +315,7 @@ export const artifacts: Artifact[] = [
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '1',
+        filterSize: '0.1',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
@@ -337,13 +337,48 @@ export const artifacts: Artifact[] = [
 
         //hueRedReducer: '1.1',
 
-        permanentSeconds: [2, 7, 9, 12, 18, 22, 26, 32],
+        // permanentSeconds: [2, 7, 9, 12, 18, 22, 26, 32],
+
+        images: [
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-1.jpg',
+            time: 2,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-2.jpg',
+            time: 7,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-3.jpg',
+            time: 9,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-4.jpg',
+            time: 12,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-5.jpg',
+            time: 18,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-6.jpg',
+            time: 22,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-7.jpg',
+            time: 26,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_basis/screenshot-8.jpg',
+            time: 32,
+          },
+        ],
       },
 
       videoBoundAnimation: true,
       frustumCulled: false,
       video: true,
-      mirrors: [wallMirror],
+      // mirrors: [wallMirror],
     },
   },
   {
@@ -363,12 +398,13 @@ export const artifacts: Artifact[] = [
       ...camSettings,
 
       frustumCulled: false,
+      // video: 'https://media.artificialmuseum.com/video/rs_schlanders_caserma/rs_schlanders_caserma.webm',
       video: true,
       record3d: {
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '1',
+        filterSize: '0.1',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
@@ -390,9 +426,36 @@ export const artifacts: Artifact[] = [
 
         //hueRedReducer: '1.1',
 
-        permanentSeconds: [2, 7, 12, 20, 24, 26],
+        // permanentSeconds: [2, 7, 12, 20, 24, 26],
+        images: [
+          {
+            file: 'reterritorializedspaces/schlanders_caserma/screenshot-1.jpg',
+            time: 2,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_caserma/screenshot-2.jpg',
+            time: 7,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_caserma/screenshot-3.jpg',
+            time: 12,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_caserma/screenshot-4.jpg',
+            time: 20,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_caserma/screenshot-5.jpg',
+            time: 24,
+          },
+          {
+            file: 'reterritorializedspaces/schlanders_caserma/screenshot-6.jpg',
+            time: 26,
+          },
+        ],
       },
-      mirrors: [wallMirror],
+
+      // mirrors: [wallMirror],
     },
   },
   {
@@ -439,6 +502,7 @@ export const artifacts: Artifact[] = [
         size: 0.02,
         sizeAttenuation: true,
       },
+
       glb: false,
 
       ...camSettings,
@@ -466,7 +530,7 @@ export const artifacts: Artifact[] = [
       record3d: {
         parentName: 'parent',
         useBone: true,
-        filterSize: '1',
+        filterSize: '0.1',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
@@ -486,14 +550,36 @@ export const artifacts: Artifact[] = [
         depthScale: '1',
         sizeAttenuation: '3.0',
 
-        //hueRedReducer: '1.1',
+        // hueRedReducer: '1.1',
 
-        //hueRedReducer: '1.1',
+        // hueRedReducer: '1.1',
 
-        permanentSeconds: [2, 4, 8, 9.5, 18.5],
+        // permanentSeconds: [2, 4, 8, 9, 18],
+        images: [
+          {
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-1.jpg',
+            time: 2,
+          },
+          {
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-2.jpg',
+            time: 4,
+          },
+          {
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-3.jpg',
+            time: 8,
+          },
+          {
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-4.jpg',
+            time: 9,
+          },
+          {
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-5.jpg',
+            time: 18,
+          },
+        ],
       },
 
-      mirrors: [wallMirror],
+      // mirrors: [wallMirror],
     },
   },
 
@@ -522,7 +608,7 @@ export const artifacts: Artifact[] = [
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '1',
+        filterSize: '0.1',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.2',
         /* maximum depth of pixels in video that should be visible. */
@@ -542,7 +628,7 @@ export const artifacts: Artifact[] = [
         depthScale: '1',
         sizeAttenuation: '2.0',
 
-        //hueRedReducer: '1.1',
+        // hueRedReducer: '1.1',
 
         // permanentSeconds: [2, 3, 9, 15, 18, 19],
         images: [

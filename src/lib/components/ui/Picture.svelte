@@ -1,6 +1,8 @@
 <script lang="ts">
   import type { PictureProps } from '$lib/types'
 
+  import { base } from '$app/paths'
+
   export let file: PictureProps['file']
 
   export let alt: PictureProps['alt'] = ''
@@ -17,15 +19,17 @@
   export let width: PictureProps['width'] = null
   export let height: PictureProps['height'] = null
 
-  const src: string = `${file}.${type}`
+  const baseSrc = file.startsWith(base) || file.startsWith('http') ? file : `${base}${file}`
+
+  const src: string = `${baseSrc}.${type}`
 </script>
 
 <picture class={pictureClass}>
   {#if avif && type !== 'svg'}
-    <source type="image/avif" srcset="{file}.avif" />
+    <source type="image/avif" srcset="{baseSrc}.avif" />
   {/if}
   {#if webp && type !== 'svg'}
-    <source type="image/webp" srcset="{file}.webp" />
+    <source type="image/webp" srcset="{baseSrc}.webp" />
   {/if}
   <img {...$$restProps} class={imgClass} {width} {height} {alt} {title} {role} {loading} {src} />
 </picture>
