@@ -315,7 +315,7 @@ export const artifacts: Artifact[] = [
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '1',
+        filterSize: '0.1',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
