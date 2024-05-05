@@ -557,23 +557,23 @@ export const artifacts: Artifact[] = [
         // permanentSeconds: [2, 4, 8, 9, 18],
         images: [
           {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-1.jpg',
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-1.jpg',
             time: 2,
           },
           {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-2.jpg',
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-2.jpg',
             time: 4,
           },
           {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-3.jpg',
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-3.jpg',
             time: 8,
           },
           {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-4.jpg',
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-4.jpg',
             time: 9,
           },
           {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-5.jpg',
+            file: 'reterritorializedspaces/schmiede_moving/screenshot-5.jpg',
             time: 18,
           },
         ],
