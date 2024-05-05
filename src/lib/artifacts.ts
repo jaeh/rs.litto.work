@@ -80,7 +80,7 @@ export type Config = {
     depthScale?: string
     sizeAttenuation?: string
 
-    // permanentSeconds?: number[]
+    permanentSeconds?: number[]
 
     images?: Image[]
   }
