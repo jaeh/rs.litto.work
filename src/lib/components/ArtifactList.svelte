@@ -24,7 +24,8 @@
 <style lang="scss">
   .Year {
     h2 {
-      font-style: italic;
+      font-style: bold;
+      font-weight: 600;
       font-size: 3em;
       padding: 0.2em 0;
       margin: 0;

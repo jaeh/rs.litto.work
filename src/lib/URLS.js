@@ -4,7 +4,7 @@ import { dev } from '$app/environment'
 export const IS_STAGING = import.meta.env.MODE === 'staging'
 
 /** @type {boolean} */
-export const IS_PROD = !dev
+export const IS_PROD = true
 
 /** @type {string} */
 export const API_VERSION = '1'

@@ -174,7 +174,7 @@ export const artifacts: Artifact[] = [
   },
 
   {
-    title: 'iBug, Chemnitz',
+    title: 'NADELFABRIK, Chemnitz',
     date: '2021-22-03',
     lat: 50.8155,
     lng: 12.9132,
@@ -294,7 +294,7 @@ export const artifacts: Artifact[] = [
   //   lng: 13.7531,
   // },
   {
-    title: 'BASIS, Schlanders',
+    title: 'BASIS Vinschgau, Schlanders',
     date: '2022-07-25',
     lat: 46.6281,
     lng: 10.7655,
@@ -347,7 +347,7 @@ export const artifacts: Artifact[] = [
     },
   },
   {
-    title: 'CASERMA, Schlanders',
+    title: 'CASERMA DRUSO, Schlanders',
     date: '2022-07-25',
     lat: 46.6277,
     lng: 10.7673,
