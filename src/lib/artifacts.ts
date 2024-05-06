@@ -80,7 +80,7 @@ export type Config = {
     depthScale?: string
     sizeAttenuation?: string
 
-    // permanentSeconds?: number[]
+    permanentSeconds?: number[]
 
     images?: Image[]
   }
@@ -174,7 +174,7 @@ export const artifacts: Artifact[] = [
   },
 
   {
-    title: 'iBug, Chemnitz',
+    title: 'NADELFABRIK, Chemnitz',
     date: '2021-22-03',
     lat: 50.8155,
     lng: 12.9132,
@@ -294,7 +294,7 @@ export const artifacts: Artifact[] = [
   //   lng: 13.7531,
   // },
   {
-    title: 'BASIS, Schlanders',
+    title: 'BASIS Vinschgau, Schlanders',
     date: '2022-07-25',
     lat: 46.6281,
     lng: 10.7655,
@@ -315,7 +315,7 @@ export const artifacts: Artifact[] = [
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '0.1',
+        filterSize: '0',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
@@ -333,46 +333,46 @@ export const artifacts: Artifact[] = [
 
         pixelDepth: '3.2',
         depthScale: '1',
-        sizeAttenuation: '4.0',
+        sizeAttenuation: '2.0',
 
         //hueRedReducer: '1.1',
 
-        // permanentSeconds: [2, 7, 9, 12, 18, 22, 26, 32],
+        permanentSeconds: [2, 7, 9, 12, 18, 22, 26, 32],
 
-        images: [
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-1.jpg',
-            time: 2,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-2.jpg',
-            time: 7,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-3.jpg',
-            time: 9,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-4.jpg',
-            time: 12,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-5.jpg',
-            time: 18,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-6.jpg',
-            time: 22,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-7.jpg',
-            time: 26,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_basis/screenshot-8.jpg',
-            time: 32,
-          },
-        ],
+        // images: [
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-1.jpg',
+        //     time: 2,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-2.jpg',
+        //     time: 7,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-3.jpg',
+        //     time: 9,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-4.jpg',
+        //     time: 12,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-5.jpg',
+        //     time: 18,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-6.jpg',
+        //     time: 22,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-7.jpg',
+        //     time: 26,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-8.jpg',
+        //     time: 32,
+        //   },
+        // ],
       },
 
       videoBoundAnimation: true,
@@ -382,7 +382,7 @@ export const artifacts: Artifact[] = [
     },
   },
   {
-    title: 'CASERMA, Schlanders',
+    title: 'CASERMA DRUSO, Schlanders',
     date: '2022-07-25',
     lat: 46.6277,
     lng: 10.7673,
@@ -404,7 +404,7 @@ export const artifacts: Artifact[] = [
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '0.1',
+        filterSize: '0',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
@@ -422,37 +422,37 @@ export const artifacts: Artifact[] = [
 
         pixelDepth: '3.2',
         depthScale: '1',
-        sizeAttenuation: '4.0',
+        sizeAttenuation: '2.0',
 
         //hueRedReducer: '1.1',
 
-        // permanentSeconds: [2, 7, 12, 20, 24, 26],
-        images: [
-          {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-1.jpg',
-            time: 2,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-2.jpg',
-            time: 7,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-3.jpg',
-            time: 12,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-4.jpg',
-            time: 20,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-5.jpg',
-            time: 24,
-          },
-          {
-            file: 'reterritorializedspaces/schlanders_caserma/screenshot-6.jpg',
-            time: 26,
-          },
-        ],
+        permanentSeconds: [2, 7, 12, 20, 24, 26],
+        // images: [
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-1.jpg',
+        //     time: 2,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-2.jpg',
+        //     time: 7,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-3.jpg',
+        //     time: 12,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-4.jpg',
+        //     time: 20,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-5.jpg',
+        //     time: 24,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-6.jpg',
+        //     time: 26,
+        //   },
+        // ],
       },
 
       // mirrors: [wallMirror],
@@ -530,7 +530,7 @@ export const artifacts: Artifact[] = [
       record3d: {
         parentName: 'parent',
         useBone: true,
-        filterSize: '0.1',
+        filterSize: '0',
         /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
@@ -548,33 +548,35 @@ export const artifacts: Artifact[] = [
 
         pixelDepth: '3.2',
         depthScale: '1',
-        sizeAttenuation: '3.0',
+        sizeAttenuation: '2.0',
 
         // hueRedReducer: '1.1',
 
-        // permanentSeconds: [2, 4, 8, 9, 18],
-        images: [
-          {
-            file: 'reterritorializedspaces/schmiede_moving/screenshot-1.jpg',
-            time: 2,
-          },
-          {
-            file: 'reterritorializedspaces/schmiede_moving/screenshot-2.jpg',
-            time: 4,
-          },
-          {
-            file: 'reterritorializedspaces/schmiede_moving/screenshot-3.jpg',
-            time: 8,
-          },
-          {
-            file: 'reterritorializedspaces/schmiede_moving/screenshot-4.jpg',
-            time: 9,
-          },
-          {
-            file: 'reterritorializedspaces/schmiede_moving/screenshot-5.jpg',
-            time: 18,
-          },
-        ],
+        // hueRedReducer: '1.1',
+
+        permanentSeconds: [2, 4, 8, 9, 18],
+        // images: [
+        //   {
+        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-1.jpg',
+        //     time: 2,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-2.jpg',
+        //     time: 4,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-3.jpg',
+        //     time: 8,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-4.jpg',
+        //     time: 9,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-5.jpg',
+        //     time: 18,
+        //   },
+        // ],
       },
 
       // mirrors: [wallMirror],
@@ -606,15 +608,15 @@ export const artifacts: Artifact[] = [
         parentName: 'parent',
         useBone: true,
 
-        filterSize: '0.1',
+        filterSize: '0',
         /* minimum distance of pixels in video that should be visible. */
-        minDepth: '0.2',
+        minDepth: '0.5',
         /* maximum depth of pixels in video that should be visible. */
         maxDepth: '5.0',
         /* in meters. Smaller values = more aggressive filtering */
         depthThresholdFilter: '2.5',
         /* scale of the artefact overall */
-        scale: '3.5',
+        scale: '3.0',
         /* the ptSize of single "pixels" of the artifact */
         ptSize: '1',
         /* defines the depth offset, multiplies depth texture hue */
@@ -628,33 +630,33 @@ export const artifacts: Artifact[] = [
 
         // hueRedReducer: '1.1',
 
-        // permanentSeconds: [2, 3, 9, 15, 18, 19],
-        images: [
-          {
-            file: 'reterritorializedspaces/inside/screenshot-1.jpg',
-            time: 2,
-          },
-          {
-            file: 'reterritorializedspaces/inside/screenshot-2.jpg',
-            time: 3,
-          },
-          {
-            file: 'reterritorializedspaces/inside/screenshot-3.jpg',
-            time: 9,
-          },
-          {
-            file: 'reterritorializedspaces/inside/screenshot-4.jpg',
-            time: 15,
-          },
-          {
-            file: 'reterritorializedspaces/inside/screenshot-5.jpg',
-            time: 18,
-          },
-          {
-            file: 'reterritorializedspaces/inside/screenshot-6.jpg',
-            time: 19,
-          },
-        ],
+        permanentSeconds: [2, 3, 9, 15, 18, 19],
+        // images: [
+        //   {
+        //     file: 'reterritorializedspaces/inside/screenshot-1.jpg',
+        //     time: 2,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/inside/screenshot-2.jpg',
+        //     time: 3,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/inside/screenshot-3.jpg',
+        //     time: 9,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/inside/screenshot-4.jpg',
+        //     time: 15,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/inside/screenshot-5.jpg',
+        //     time: 18,
+        //   },
+        //   {
+        //     file: 'reterritorializedspaces/inside/screenshot-6.jpg',
+        //     time: 19,
+        //   },
+        // ],
       },
 
       mirrors: [wallMirror],

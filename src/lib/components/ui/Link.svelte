@@ -68,7 +68,7 @@
     position: var(--link-position, relative);
     align-items: var(--link-align-items, normal);
 
-    font-family: 'Noto-Sans';
+    font-family: 'Noto Sans';
     font-size: var(--link-font-size, 1em);
     font-weight: var(--link-font-weight, 500);
     text-decoration: var(--link-text-decoration, none);

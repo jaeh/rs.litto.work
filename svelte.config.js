@@ -18,7 +18,7 @@ export const config = {
     },
 
     paths: {
-      base: '/rs.litto.work',
+      base: '',
     }
   },
 }

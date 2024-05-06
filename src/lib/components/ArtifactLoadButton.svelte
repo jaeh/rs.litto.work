@@ -7,13 +7,13 @@
 
   const loadArtifact = async (evt: MouseEvent) => {
     let init
-    if (ENGINE_URL === 'http://localhost:8006') {
-      const { sandbox } = await import('http://localhost:8006/rs.js')
-      init = sandbox
-    } else {
+    // if (ENGINE_URL === 'http://localhost:8006') {
+    //   const { sandbox } = await import('http://localhost:8006/rs.js')
+    //   init = sandbox
+    // } else {
       const { sandbox } = await import('https://engine.artificialmuseum.com/rs.js')
       init = sandbox
-    }
+    // }
 
     const onLoadObjectButtonClick = await init()
 
