@@ -552,8 +552,6 @@ export const artifacts: Artifact[] = [
 
         // hueRedReducer: '1.1',
 
-        // hueRedReducer: '1.1',
-
         // permanentSeconds: [2, 4, 8, 9, 18],
         images: [
           {
@@ -589,8 +587,8 @@ export const artifacts: Artifact[] = [
   {
     title: 'Symposion Lindabrunn',
     date: '2023-07-15',
-    lat: 47.91325,
-    lng: 16.15975,
+    lat: 47.9132,
+    lng: 16.1597,
 
     config: {
       slug: 'rinside',
