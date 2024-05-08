@@ -188,7 +188,7 @@ export const artifacts: Artifact[] = [
 
       ply: {
         file: 'rs/ibug.ply',
-        size: 0.015,
+        size: 0.01,
         sizeAttenuation: true,
       },
 
@@ -378,7 +378,7 @@ export const artifacts: Artifact[] = [
       videoBoundAnimation: true,
       frustumCulled: false,
       video: true,
-      // mirrors: [wallMirror],
+      mirrors: [floorMirror],
     },
   },
   {
@@ -499,7 +499,7 @@ export const artifacts: Artifact[] = [
       audio: 'rschmiede2022',
       ply: {
         file: 'rs/schmiede_pc',
-        size: 0.02,
+        size: 0.01,
         sizeAttenuation: true,
       },
 
