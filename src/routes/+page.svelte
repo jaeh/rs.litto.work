@@ -19,7 +19,7 @@
   const defaultArtifact = {
     name: 'Medienwerkstatt Wien',
     slug: 'medienwerkstatt',
-    date: '2023-05-10',
+    date: '2024-05-10',
     lat: 48.2016,
     lng: 16.3466,
 
