@@ -32,6 +32,8 @@
       showVideoTime: true,
       frustumCulled: false,
 
+      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+
       mirrors: [
         {
           type: 2,
