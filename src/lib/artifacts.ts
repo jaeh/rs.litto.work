@@ -436,9 +436,12 @@ export const artifacts: Artifact[] = [
         sizeAttenuation: '2.0',
 
         permanentSeconds: [2, 7, 12, 20, 24, 26],
+
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['face', 'videotarget'],
       },
 
-      // mirrors: [wallMirror],
+      mirrors: [wallMirror],
     },
   },
   {
@@ -544,57 +547,57 @@ export const artifacts: Artifact[] = [
   /*
    * 2023
    */
-  {
-    title: 'Justizpalast',
-    date: '2023-08-31',
-    lat: 48.2066,
-    lng: 16.3566,
+  // {
+  //   title: 'Justizpalast',
+  //   date: '2023-08-31',
+  //   lat: 48.2066,
+  //   lng: 16.3566,
 
-    config: {
-      slug: 'rs_justizpalast',
-      frustumCulled: false,
-      sky: 'vienna/default_dark',
-      // sky: 'lindabrunn/theothervillage',
-      distance: -1,
-      file: 'rs/justizpalast',
+  //   config: {
+  //     slug: 'rs_justizpalast',
+  //     frustumCulled: false,
+  //     sky: 'vienna/default_dark',
+  //     // sky: 'lindabrunn/theothervillage',
+  //     distance: -1,
+  //     file: 'rs/justizpalast',
 
-      ...camSettings,
+  //     ...camSettings,
 
-      video: true,
+  //     video: true,
 
-      record3d: {
-        parentName: 'parent',
-        useBone: true,
+  //     record3d: {
+  //       parentName: 'parent',
+  //       useBone: true,
 
-        loopVideo: false,
-        hideModelsOnVideoEnded: ['face', 'mirror', 'videotarget'],
+  //       loopVideo: false,
+  //       hideModelsOnVideoEnded: ['face', 'mirror', 'videotarget'],
 
-        filterSize: '0',
-        /* minimum distance of pixels in video that should be visible. */
-        minDepth: '0.5',
-        /* maximum depth of pixels in video that should be visible. */
-        maxDepth: '5.0',
-        /* in meters. Smaller values = more aggressive filtering */
-        depthThresholdFilter: '2.5',
-        /* scale of the artefact overall */
-        scale: '8.0',
-        /* the ptSize of single "pixels" of the artifact */
-        ptSize: '1',
-        /* defines the depth offset, multiplies depth texture hue */
-        //depthHueMultiplier: '3.0',
-        /* positive values move all pixels towards the camera */
-        zOffset: '0.0',
+  //       filterSize: '0',
+  //       /* minimum distance of pixels in video that should be visible. */
+  //       minDepth: '0.5',
+  //       /* maximum depth of pixels in video that should be visible. */
+  //       maxDepth: '5.0',
+  //       /* in meters. Smaller values = more aggressive filtering */
+  //       depthThresholdFilter: '2.5',
+  //       /* scale of the artefact overall */
+  //       scale: '8.0',
+  //       /* the ptSize of single "pixels" of the artifact */
+  //       ptSize: '1',
+  //       /* defines the depth offset, multiplies depth texture hue */
+  //       //depthHueMultiplier: '3.0',
+  //       /* positive values move all pixels towards the camera */
+  //       zOffset: '0.0',
 
-        pixelDepth: '3.2',
-        depthScale: '1',
-        sizeAttenuation: '2.0',
+  //       pixelDepth: '3.2',
+  //       depthScale: '1',
+  //       sizeAttenuation: '2.0',
 
-        permanentSeconds: [2, 3, 9, 15, 18, 19],
-      },
+  //       permanentSeconds: [2, 3, 9, 15, 18, 19],
+  //     },
 
-      // mirrors: [wallMirror],
-    },
-  },
+  //     mirrors: [wallMirror],
+  //   },
+  // },
 
   {
     title: 'Symposion Lindabrunn 1',
