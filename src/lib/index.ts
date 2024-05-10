@@ -3,7 +3,7 @@ export { artifacts, years } from './artifacts'
 export { default as ArtifactList } from './components/ArtifactList.svelte'
 export { default as ArtifactListItem } from './components/ArtifactListItem.svelte'
 export { default as ArtifactLoadButton } from './components/ArtifactLoadButton.svelte'
-export { default as ArtifactLive } from './components/ArtifactLive.svelte'
+// export { default as ArtifactLive } from './components/ArtifactLive.svelte'
 export { default as Hero } from './components/Hero.svelte'
 export { default as Noscript } from './components/Noscript.svelte'
 

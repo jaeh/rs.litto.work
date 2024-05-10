@@ -2,7 +2,7 @@
   import {
     years,
     ArtifactList,
-    ArtifactLive,
+    // ArtifactLive,
     DeviceWarning,
     Hero,
     HUD,
