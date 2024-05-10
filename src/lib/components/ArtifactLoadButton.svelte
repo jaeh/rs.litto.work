@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ENGINE_URL } from '$lib/URLS'
+  // import { ENGINE_URL } from '$lib/URLS'
 
   import type { Artifact } from '../artifacts'
 
@@ -11,8 +11,9 @@
     //   const { sandbox } = await import('http://localhost:8006/rs.js')
     //   init = sandbox
     // } else {
-      const { sandbox } = await import('https://engine.artificialmuseum.com/rs.js')
-      init = sandbox
+    // const { sandbox } = await import('http://localhost:8006/rs.js')
+    const { sandbox } = await import('https://engine.artificialmuseum.com/rs.js')
+    init = sandbox
     // }
 
     const onLoadObjectButtonClick = await init()
