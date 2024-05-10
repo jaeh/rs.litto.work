@@ -91,9 +91,11 @@
     const year = interactiveYears['2024'] || []
 
     if (Array.isArray(data) && data.length) {
-      data.forEach((artifactName, i) => {
+      await Promise.all(data.map(async (artifactName, i) => {
         const id = artifactName.replace('.mp4', '')
         const oscFile = `https://live.artificialmuseum.com/data/medienwerkstatt/${id}.txt`
+
+        const { artifact: onlineSettings } = await import(`https://live.artificialmuseum.com/data/medienwerkstatt/medienwerkstatt-${id}.js`)
 
         const num = year.length + 1
 
@@ -103,6 +105,7 @@
         if (!exists) {
           const item = {
             ...defaultArtifact,
+            ...onlineSettings,
             name,
             title: name,
             config: {
@@ -112,12 +115,17 @@
 
               oscFile,
               video: `https://live.artificialmuseum.com/data/video/${id}.mp4`,
+
+              record3d: {
+                ...defaultArtifact.config.record3d,
+                ...onlineSettings.config.record3d,
+              }
             },
           }
 
           year.push(item)
         }
-      })
+      }))
 
       interactiveYears['2024'] = year
     }
