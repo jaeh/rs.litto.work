@@ -92,11 +92,14 @@ const createBrowsersniff = ua => {
   /** @type {boolean} */
   const android = ua.includes('android')
 
+  const xrbrowser = webxrviewer && ua.includes('safari')
+
   const sniffed = {
     version,
     chrome,
     android,
     webxrviewer,
+    xrbrowser,
     hell,
     chromeVersion,
     firefox,
