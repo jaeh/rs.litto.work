@@ -158,7 +158,6 @@ const camSettings = {
 }
 
 export const artifacts: Artifact[] = [
-
   {
     title: 'NADELFABRIK 1, Chemnitz',
     date: '2021-03-22',
@@ -173,7 +172,6 @@ export const artifacts: Artifact[] = [
       // sky: 'vienna/semmelweisklinik-fog',
 
       video: true,
-
 
       cam: {
         ...camSettings,

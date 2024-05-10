@@ -2,11 +2,11 @@
   import type { Years } from '../artifacts'
 
   import { ArtifactListItem, Picture } from '$lib'
-    import { base } from '$app/paths';
+  import { base } from '$app/paths'
 
   export let years: Years
 
-  $: yearArray = Object.entries(years).sort((a, b) => a > b ? -1 : 1)
+  $: yearArray = Object.entries(years).sort((a, b) => (a > b ? -1 : 1))
 </script>
 
 {#each yearArray as [year, items]}

@@ -19,7 +19,7 @@ export const config = {
 
     paths: {
       base: '',
-    }
+    },
   },
 }
 
