@@ -37,12 +37,25 @@ export type Config = {
     x?: number
     y?: number
     z?: number
+    maxPolar?: number
+    minPolar?: number
   }
 
   lookAt?: {
     x?: number
     y?: number
     z?: number
+  }
+
+  pos?: {
+    x?: number
+    y?: number
+    z?: number
+  }
+
+  orbit?: {
+    min?: number
+    max?: number
   }
 
   distance?: number
@@ -83,6 +96,9 @@ export type Config = {
     permanentSeconds?: number[]
 
     images?: Image[]
+
+    hideModelsOnVideoEnded?: string[]
+    loopVideo?: boolean
   }
 
   videoBoundAnimation?: boolean
@@ -142,6 +158,81 @@ const camSettings = {
 }
 
 export const artifacts: Artifact[] = [
+
+  {
+    title: 'NADELFABRIK 1, Chemnitz',
+    date: '2021-03-22',
+    lat: 50.8155,
+    lng: 12.9132,
+
+    config: {
+      slug: 'leerraumnadelfabrik1',
+      // file: 'rs/ibug',
+      glb: false,
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
+
+      video: true,
+
+
+      cam: {
+        ...camSettings,
+        y: 1,
+        z: 2,
+        maxPolar: 180,
+      },
+
+      lookAt: {
+        y: 1,
+      },
+
+      record3d: {
+        zOffset: '1.0',
+      },
+
+      pos: {
+        y: 1,
+      },
+
+      orbit: {
+        min: 0,
+      },
+
+      distance: -1,
+      // record3d: true,
+
+      mirrors: [floorMirror],
+    },
+  },
+
+  {
+    title: 'NADELFABRIK 2, Chemnitz',
+    date: '2021-03-22',
+    lat: 50.8155,
+    lng: 12.9132,
+
+    config: {
+      slug: 'rs_ibug',
+      // file: 'rs/ibug',
+      glb: false,
+      sky: 'vienna/white',
+      // sky: 'vienna/semmelweisklinik-fog',
+
+      ply: {
+        file: 'rs/ibug.ply',
+        size: 0.01,
+        sizeAttenuation: true,
+      },
+
+      ...camSettings,
+
+      distance: -1,
+      // record3d: true,
+
+      mirrors: [floorMirror],
+    },
+  },
+
   {
     title: 'DREIMÄDERLHAUS, Vienna',
     date: '2021-08-03',
@@ -170,34 +261,6 @@ export const artifacts: Artifact[] = [
 
       clip: true,
       video: true,
-    },
-  },
-
-  {
-    title: 'NADELFABRIK, Chemnitz',
-    date: '2021-22-03',
-    lat: 50.8155,
-    lng: 12.9132,
-
-    config: {
-      slug: 'rs_ibug',
-      // file: 'rs/ibug',
-      glb: false,
-      sky: 'vienna/white',
-      // sky: 'vienna/semmelweisklinik-fog',
-
-      ply: {
-        file: 'rs/ibug.ply',
-        size: 0.01,
-        sizeAttenuation: true,
-      },
-
-      ...camSettings,
-
-      distance: -1,
-      // record3d: true,
-
-      mirrors: [floorMirror],
     },
   },
 
@@ -316,69 +379,27 @@ export const artifacts: Artifact[] = [
         useBone: true,
 
         filterSize: '0',
-        /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
-        /* maximum depth of pixels in video that should be visible. */
         maxDepth: '5.0',
-        /* in meters. Smaller values = more aggressive filtering */
         depthThresholdFilter: '2.5',
-        /* scale of the artefact overall */
         scale: '3.0',
-        /* the ptSize of single "pixels" of the artifact */
         ptSize: '1',
-        /* defines the depth offset, multiplies depth texture hue */
-        //depthHueMultiplier: '3.0',
-        /* positive values move all pixels towards the camera */
         zOffset: '0.0',
 
         pixelDepth: '3.2',
         depthScale: '1',
         sizeAttenuation: '2.0',
 
-        //hueRedReducer: '1.1',
-
         permanentSeconds: [2, 7, 9, 12, 18, 22, 26, 32],
 
-        // images: [
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-1.jpg',
-        //     time: 2,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-2.jpg',
-        //     time: 7,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-3.jpg',
-        //     time: 9,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-4.jpg',
-        //     time: 12,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-5.jpg',
-        //     time: 18,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-6.jpg',
-        //     time: 22,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-7.jpg',
-        //     time: 26,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_basis/screenshot-8.jpg',
-        //     time: 32,
-        //   },
-        // ],
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['face', 'mirror'],
       },
 
       videoBoundAnimation: true,
       frustumCulled: false,
       video: true,
-      mirrors: [floorMirror],
+      mirrors: [wallMirror],
     },
   },
   {
@@ -390,7 +411,6 @@ export const artifacts: Artifact[] = [
     config: {
       slug: 'rs_schlanders_caserma',
       sky: 'vienna/white',
-      // sky: 'vienna/semmelweisklinik-fog',
       file: 'rs/schlanders_caserma',
 
       distance: -1,
@@ -398,61 +418,24 @@ export const artifacts: Artifact[] = [
       ...camSettings,
 
       frustumCulled: false,
-      // video: 'https://media.artificialmuseum.com/video/rs_schlanders_caserma/rs_schlanders_caserma.webm',
       video: true,
       record3d: {
         parentName: 'parent',
         useBone: true,
 
         filterSize: '0',
-        /* minimum distance of pixels in video that should be visible. */
         minDepth: '0.5',
-        /* maximum depth of pixels in video that should be visible. */
         maxDepth: '5.0',
-        /* in meters. Smaller values = more aggressive filtering */
         depthThresholdFilter: '2.5',
-        /* scale of the artefact overall */
         scale: '3.0',
-        /* the ptSize of single "pixels" of the artifact */
         ptSize: '1',
-        /* defines the depth offset, multiplies depth texture hue */
-        //depthHueMultiplier: '3.0',
-        /* positive values move all pixels towards the camera */
         zOffset: '0.0',
 
         pixelDepth: '3.2',
         depthScale: '1',
         sizeAttenuation: '2.0',
 
-        //hueRedReducer: '1.1',
-
         permanentSeconds: [2, 7, 12, 20, 24, 26],
-        // images: [
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-1.jpg',
-        //     time: 2,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-2.jpg',
-        //     time: 7,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-3.jpg',
-        //     time: 12,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-4.jpg',
-        //     time: 20,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-5.jpg',
-        //     time: 24,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schlanders_caserma/screenshot-6.jpg',
-        //     time: 26,
-        //   },
-        // ],
       },
 
       // mirrors: [wallMirror],
@@ -551,35 +534,10 @@ export const artifacts: Artifact[] = [
         sizeAttenuation: '2.0',
 
         // hueRedReducer: '1.1',
-
-        // hueRedReducer: '1.1',
-
         permanentSeconds: [2, 4, 8, 9, 18],
-        // images: [
-        //   {
-        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-1.jpg',
-        //     time: 2,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-2.jpg',
-        //     time: 4,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-3.jpg',
-        //     time: 8,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-4.jpg',
-        //     time: 9,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/schmiede_moving/screenshot-5.jpg',
-        //     time: 18,
-        //   },
-        // ],
       },
 
-      // mirrors: [wallMirror],
+      mirrors: [wallMirror],
     },
   },
 
@@ -587,7 +545,59 @@ export const artifacts: Artifact[] = [
    * 2023
    */
   {
-    title: 'Symposion Lindabrunn',
+    title: 'Justizpalast',
+    date: '2023-08-31',
+    lat: 48.2066,
+    lng: 16.3566,
+
+    config: {
+      slug: 'rs_justizpalast',
+      frustumCulled: false,
+      sky: 'vienna/default_dark',
+      // sky: 'lindabrunn/theothervillage',
+      distance: -1,
+      file: 'rs/justizpalast',
+
+      ...camSettings,
+
+      video: true,
+
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['face', 'mirror', 'videotarget'],
+
+        filterSize: '0',
+        /* minimum distance of pixels in video that should be visible. */
+        minDepth: '0.5',
+        /* maximum depth of pixels in video that should be visible. */
+        maxDepth: '5.0',
+        /* in meters. Smaller values = more aggressive filtering */
+        depthThresholdFilter: '2.5',
+        /* scale of the artefact overall */
+        scale: '8.0',
+        /* the ptSize of single "pixels" of the artifact */
+        ptSize: '1',
+        /* defines the depth offset, multiplies depth texture hue */
+        //depthHueMultiplier: '3.0',
+        /* positive values move all pixels towards the camera */
+        zOffset: '0.0',
+
+        pixelDepth: '3.2',
+        depthScale: '1',
+        sizeAttenuation: '2.0',
+
+        permanentSeconds: [2, 3, 9, 15, 18, 19],
+      },
+
+      // mirrors: [wallMirror],
+    },
+  },
+
+  {
+    title: 'Symposion Lindabrunn 1',
     date: '2023-07-15',
     lat: 47.9132,
     lng: 16.1597,
@@ -628,40 +638,81 @@ export const artifacts: Artifact[] = [
         depthScale: '1',
         sizeAttenuation: '2.0',
 
-        // hueRedReducer: '1.1',
-
         permanentSeconds: [2, 3, 9, 15, 18, 19],
-        // images: [
-        //   {
-        //     file: 'reterritorializedspaces/inside/screenshot-1.jpg',
-        //     time: 2,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/inside/screenshot-2.jpg',
-        //     time: 3,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/inside/screenshot-3.jpg',
-        //     time: 9,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/inside/screenshot-4.jpg',
-        //     time: 15,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/inside/screenshot-5.jpg',
-        //     time: 18,
-        //   },
-        //   {
-        //     file: 'reterritorializedspaces/inside/screenshot-6.jpg',
-        //     time: 19,
-        //   },
-        // ],
+
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['face', 'mirror', 'mirror23'],
       },
 
       mirrors: [wallMirror],
     },
   },
+  {
+    title: 'Symposion Lindabrunn 2',
+    date: '2023-07-15',
+    lat: 47.9132,
+    lng: 16.1597,
+
+    config: {
+      slug: 'rs_lindabrunn_2',
+      frustumCulled: false,
+      sky: 'lindabrunn/rs_lindabrunn_2',
+      distance: -1,
+      glb: false,
+      audio: 'rs_lindabrunn_2',
+
+      ...camSettings,
+
+      ply: {
+        file: 'rs/lindabrunn_2',
+        size: 0.01,
+        sizeAttenuation: true,
+      },
+
+      // mirrors: [floorMirror],
+    },
+  },
+
+  // {
+  //   title: 'Symposion Lindabrunn 3',
+  //   date: '2023-07-15',
+  //   lat: 47.9132,
+  //   lng: 16.1597,
+
+  //   config: {
+  //     slug: 'rs_lindabrunn_3',
+  //     frustumCulled: false,
+  //     sky: 'vienna/white',
+  //     // sky: 'lindabrunn/theothervillage',
+  //     distance: -1,
+  //     file: 'rs/lindabrunn_3',
+
+  //     ...camSettings,
+
+  //     video: true,
+
+  //     record3d: {
+  //       parentName: 'parent',
+  //       useBone: true,
+
+  //       filterSize: '0',
+  //       minDepth: '0.5',
+  //       maxDepth: '5.0',
+  //       depthThresholdFilter: '2.5',
+  //       scale: '3.0',
+  //       ptSize: '1',
+  //       zOffset: '0.0',
+
+  //       pixelDepth: '3.2',
+  //       depthScale: '1',
+  //       sizeAttenuation: '2.0',
+
+  //       permanentSeconds: [2, 9, 16, 20],
+  //     },
+  //     mirrors: [floorMirror],
+  //   },
+  // },
+
   // {
   //   title: 'AA Collection, Vienna',
   //   date: '2023-06-21, 19:00',

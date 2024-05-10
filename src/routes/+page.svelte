@@ -2,10 +2,11 @@
   import {
     years,
     ArtifactList,
+    ArtifactLive,
     DeviceWarning,
     Hero,
     HUD,
-    Picture,
+    // Picture,
     Link,
     Noscript,
     TimeoutWarning,
@@ -23,21 +24,23 @@
   </p>
 
   <div class="description">
-    "Reterritorialized Spaces" are created using a specific documentation process of performances in public spaces. They are then "archived" as virtually walkable augmented reality sculptures. 
-    The focus is on repurposed places in public spaces that have been temporarily or permanently occupied by autonomously organized communities, 
-    finding a new purpose (e.g., factories, hospitals, military areas). 
-    
-    
-    In a specifically developed recording process, the surrounding space of a performer is captured by a mirror worn on her head and a LIDAR scanner. 
-    
-    
-    The performer is blind during this process. 
-    Three-dimensional deformations of the environment arise in connection with the movement of her body. 
-    
-    
+    "Reterritorialized Spaces" are created using a specific documentation process of performances in public spaces. They are then "archived" as virtually walkable augmented reality sculptures.
+    The focus is on repurposed places in public spaces that have been temporarily or permanently occupied by autonomously organized communities,
+    finding a new purpose (e.g., factories, hospitals, military areas).
+
+
+    In a specifically developed recording process, the surrounding space of a performer is captured by a mirror worn on her head and a LIDAR scanner.
+
+
+    The performer is blind during this process.
+    Three-dimensional deformations of the environment arise in connection with the movement of her body.
+
+
     The resulting visual material is translated into the virtual space. Exhibition visitors can explore and walk through the AR sculpture using a tablet or smartphone.
-    
+
   </div>
+
+  <!-- <ArtifactLive /> -->
 
   <ArtifactList {years} />
 

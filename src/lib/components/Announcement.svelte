@@ -1,5 +1,10 @@
 <script type="ts">
-  import { years, ArtifactList, Picture } from '$lib'
+  import {
+    years,
+    ArtifactList,
+    ArtifactLive,
+    // Picture
+  } from '$lib'
 </script>
 
 <div class="Announcement">
@@ -20,6 +25,8 @@
     <a target="_blank" href="https://artificialmuseum.com/">artificialmuseum.com</a>
     will remain.
   </div>
+
+  <ArtifactLive />
 
   <ArtifactList {years} />
 

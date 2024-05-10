@@ -5,9 +5,11 @@
     import { base } from '$app/paths';
 
   export let years: Years
+
+  $: yearArray = Object.entries(years).sort((a, b) => a > b ? -1 : 1)
 </script>
 
-{#each Object.entries(years) as [year, items]}
+{#each yearArray as [year, items]}
   <div class="Year">
     <img class="Lines" src="{base}/img/lines.png" alt="" height="4" width="300" />
     <h2>{year}</h2>
