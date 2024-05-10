@@ -32,7 +32,7 @@
       // showVideoTime: true,
       frustumCulled: false,
 
-      // audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
 
       mirrors: [
         {
