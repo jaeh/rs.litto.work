@@ -91,6 +91,8 @@
     const year = interactiveYears['2024'] || []
 
     if (Array.isArray(data) && data.length) {
+      let pushed = false
+
       await Promise.all(data.map(async (artifactName, i) => {
         const id = artifactName.replace('.mp4', '')
         const oscFile = `https://live.artificialmuseum.com/data/medienwerkstatt/${id}.txt`
@@ -120,6 +122,18 @@
                 ...defaultArtifact.config.record3d,
                 ...onlineSettings.config.record3d,
                 scale: '1.0',
+                ptSize: '1.2',
+                 filterSize: '0',
+                minDepth: '0.1',
+                maxDepth: '5.0',
+                depthThresholdFilter: '2.5',
+                zOffset: '0.0',
+
+                pixelDepth: '2.0',
+                depthScale: '1',
+                sizeAttenuation: '3.0',
+
+                hueRedReducer: '0.9',
               },
               shadowPlane: false,
             },
@@ -128,10 +142,13 @@
           console.log('item', item)
 
           year.push(item)
+          pushed = true
         }
       }))
 
-      interactiveYears['2024'] = year
+      if (pushed) {
+        interactiveYears['2024'] = year
+      }
     }
 
     setTimeout(tryRequest, 1000)
