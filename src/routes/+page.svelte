@@ -119,9 +119,13 @@
               record3d: {
                 ...defaultArtifact.config.record3d,
                 ...onlineSettings.config.record3d,
-              }
+                scale: '1.0',
+              },
+              shadowPlane: false,
             },
           }
+
+          console.log('item', item)
 
           year.push(item)
         }
