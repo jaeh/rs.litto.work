@@ -108,6 +108,7 @@
           const item = {
             ...defaultArtifact,
             ...onlineSettings,
+            id,
             name,
             title: name,
             config: {
@@ -147,7 +148,7 @@
       }))
 
       if (pushed) {
-        interactiveYears['2024'] = year
+        interactiveYears['2024'] = year.sort((a, b) => parseInt(a.id) < parseInt(b.id) ? -1 : 1)
       }
     }
 
