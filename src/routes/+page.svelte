@@ -134,8 +134,9 @@
                 depthScale: '1',
                 sizeAttenuation: '3.0',
 
-                hueRedReducer: '0',
+                hueRedReducer: '0.2',
               },
+
               shadowPlane: false,
             },
           }
